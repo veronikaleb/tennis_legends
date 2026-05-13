@@ -1,0 +1,250 @@
+ :root {
+            --court-green: #1A4F30;
+            --tennis-yellow: #F2FF00;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #ffffff;
+            color: #1a1a1a;
+            scroll-behavior: smooth;
+        }
+        .sport-font { font-family: 'Oswald', sans-serif; text-transform: uppercase; }
+        
+        /* Court Texture Overlay */
+        .court-bg {
+            background-image: 
+                linear-gradient(rgba(26, 79, 48, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(26, 79, 48, 0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        .bg-court-green { background-color: var(--court-green); }
+        .text-tennis-yellow { color: var(--tennis-yellow); }
+        .bg-tennis-yellow { background-color: var(--tennis-yellow); }
+        .border-tennis-yellow { border-color: var(--tennis-yellow); }
+
+        /* Large Background Text for depth */
+        .ghost-text {
+            font-size: 18vw;
+            font-weight: 900;
+            color: rgba(26, 79, 48, 0.04);
+            position: absolute;
+            z-index: -1;
+            line-height: 0.8;
+            pointer-events: none;
+            user-select: none;
+        }
+
+        /* Card Hover Effects */
+        .player-card {
+            transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        .player-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 30px 60px -12px rgba(26, 79, 48, 0.15);
+            border-color: var(--tennis-yellow);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: var(--court-green); }
+        /* Анімація для безкінечного руху */
+        @keyframes marquee {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+            }
+
+            .animate-marquee {
+                display: flex;
+                width: max-content;
+                animation: marquee 35s linear infinite;
+            }
+
+            /* Стиль для контурного жовтого тексту */
+            .text-outline-yellow {
+                text-shadow: none;
+                -webkit-text-stroke: 2px #F2FF00; /* Жовтий контур */
+                color: transparent;
+            }
+
+            .marquee-container {
+                pointer-events: none;
+                user-select: none;
+            }
+
+            /* Custom Styles for 70s Page */
+.outline-text {
+    -webkit-text-stroke: 1.5px #1A4F30;
+}
+
+.player-card-70s {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.player-card-70s:hover {
+    transform: translateY(-10px);
+}
+
+.player-card-70s.flex-row-layout {
+    flex-direction: row;
+}
+
+/* Контейнер для фото */
+.img-container {
+    width: 100%;
+    /* Встановлюємо фіксоване співвідношення сторін 3:2 */
+    aspect-ratio: 3 / 2; 
+    overflow: hidden;
+    background-color: #f3f4f6;
+}
+
+.img-container img {
+    width: 100%;
+    height: 100%;
+    /* Ключова властивість: зберігає пропорції, обрізаючи зайве */
+    object-fit: cover;
+    /* Центрування обличчя на фото */
+    object-position: center top; 
+    display: block;
+}
+
+/* Спеціальний фікс для горизонтальних карток (Doubles Legends) */
+.flex-row-layout {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .flex-row-layout {
+        flex-direction: row;
+    }
+    .flex-row-layout .img-container {
+        width: 33.333%;
+        aspect-ratio: auto; /* Скасовуємо 3:2 для бокового розміщення */
+        min-height: 100%;
+    }
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin: 1.5rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #f3f4f6;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.stats-grid p {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #9ca3af;
+}
+
+.stats-grid span {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a4f30;
+}
+
+.description {
+    font-size: 14px;
+    color: #6b7280;
+    font-style: italic;
+    line-height: 1.5;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .sport-font.text-7xl { font-size: 4rem !important; }
+    .sport-font.text-6xl { font-size: 3.5rem !important; }
+    .player-card-70s.flex-row-layout { flex-direction: column; }
+    .img-container { height: 300px; }
+}
+.bg-court-green { background-color: #1A4F30; }
+.text-court-green { color: #1A4F30; }
+.bg-tennis-yellow { background-color: #f2ff00; }
+
+.surface-texture {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+
+.court-lines {
+    background-image: 
+        linear-gradient(90deg, transparent 49.8%, rgba(255,255,255,0.4) 49.8%, rgba(255,255,255,0.4) 50.2%, transparent 50.2%),
+        linear-gradient(90deg, rgba(255,255,255,0.3) 2px, transparent 2px),
+        linear-gradient(-90deg, rgba(255,255,255,0.3) 2px, transparent 2px),
+        linear-gradient(0deg, transparent 70%, rgba(255,255,255,0.3) 70%, rgba(255,255,255,0.3) 70.5%, transparent 70.5%);
+    background-size: 100% 100%;
+}
+
+.outline-white {
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.5);
+    color: transparent;
+}
+
+.player-card-70s {
+    background: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 10px 30px -15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.player-card-70s:hover { transform: translateY(-10px); }
+
+.img-placeholder {
+    height: 250px;
+    background: #e5e7eb;
+}
+
+.img-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin: 1.5rem 0;
+    padding: 1rem 0;
+    border-top: 1px solid #f3f4f6;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.stats-grid p {
+    font-size: 9px;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #9ca3af;
+}
+
+.stats-grid span {
+    font-size: 13px;
+    font-weight: 700;
+    color: #1A4F30;
+}
+
+.description {
+    font-size: 14px;
+    color: #6b7280;
+    font-style: italic;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .sport-font.text-7xl { font-size: 4rem !important; }
+    .player-card-70s.md:flex-row { flex-direction: column; }
+}

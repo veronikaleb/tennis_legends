@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Legends: The Golden Eras | Interactive Encyclopedia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="court-bg">
+<header class="sticky top-0 z-50 bg-court-green text-white py-5 px-6 md:px-12 flex items-center justify-between shadow-xl">
+    <div class="flex items-center gap-3 shrink-0">
+        <svg class="w-8 h-8 text-tennis-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M4.32 17.68a7 7 0 0 1 9.36-9.36"></path>
+            <path d="M10.32 4.32a7 7 0 0 1 9.36 9.36"></path>
+        </svg>
+        <span class="sport-font text-2xl tracking-tighter"><a href="index.html">Tennis Legends</a></span>
+    </div>
+
+    <nav class="hidden lg:flex items-center gap-4 xl:gap-6 font-bold text-[10px] xl:text-xs tracking-widest uppercase">
+        <a href="index.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">Home</a>
+        <a href="#" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">Players</a>
+        <div class="flex items-center gap-3 border-x border-white/10 px-4">
+            <a href="1970s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">70s</a>
+            <a href="1980s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">80s</a>
+            <a href="1990s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">90s</a>
+            <a href="2000s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">00s</a>
+            <a href="2010s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">10s</a>
+            <a href="2020s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">20s</a>
+        </div>
+        <a href="ukrtennis.html" class="group flex items-center gap-2 px-4 py-2 border border-white/20 rounded-full hover:bg-white transition-all duration-300">
+            <span class="group-hover:text-black transition-colors duration-300">Ukrainian Tennis 🇺🇦</span>
+        </a>
+    </nav>
+
+    <div class="lg:hidden flex items-center">
+        <button id="open-menu" class="text-white focus:outline-none">
+            <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-court-green z-[100] translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col items-center justify-center gap-8">
+        <button id="close-menu" class="absolute top-6 right-6 text-white text-4xl">&times;</button>
+        <a href="#players" class="menu-link text-2xl font-bold uppercase tracking-widest hover:text-tennis-yellow">Players</a>
+        <div class="flex flex-col items-center gap-4 border-y border-white/10 py-6 w-full">
+            <a href="#70s" class="menu-link text-xl hover:text-tennis-yellow">1970s</a>
+            <a href="#80s" class="menu-link text-xl hover:text-tennis-yellow">1980s</a>
+            <a href="#90s" class="menu-link text-xl hover:text-tennis-yellow">1990s</a>
+            <a href="#00s" class="menu-link text-xl hover:text-tennis-yellow">2000s</a>
+            <a href="#10s" class="menu-link text-xl hover:text-tennis-yellow">2010s</a>
+            <a href="#20s" class="menu-link text-xl hover:text-tennis-yellow">2020s</a>
+        </div>
+        <a href="#ukraine" class="menu-link text-xl font-bold text-tennis-yellow border border-tennis-yellow px-6 py-3 rounded-full">Ukrainian Tennis 🇺🇦</a>
+    </div>
+</header>
+<!-- Ukrainian Tennis Heritage Section -->
+<section class="bg-white">
+    <!-- Header: Full Width Style -->
+    <header id="ukraine" class="relative w-full flex items-center px-6 md:px-12 py-32 overflow-hidden bg-[#3c4a8b]">
+        <!-- Background Grid -->
+        <div class="absolute inset-0 z-0" 
+             style="background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), 
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px); 
+                    background-size: 50px 50px;">
+        </div>
+
+        <!-- Massive Background Text -->
+        <div class="absolute top-20 right-0 translate-x-10 md:-translate-x-10 sport-font text-[11rem] md:text-[22rem] text-white select-none pointer-events-none z-0 italic font-black opacity-5 whitespace-nowrap leading-none">
+            UKRAINE
+        </div>
+
+        <div class="max-w-7xl mx-auto w-full z-10 relative">
+            <!-- Tag -->
+            <div class="inline-block bg-[#FFD700] text-[#3c4a8b] px-4 py-1 font-black text-sm uppercase mb-6 italic shadow-sm">
+                National Heritage
+            </div>
+            
+            <!-- Main Title with Outline -->
+            <h2 class="sport-font text-7xl md:text-[10rem] leading-[0.85] text-white mb-8 uppercase italic">
+                Ukrainian <br><span class="text-transparent" style="-webkit-text-stroke: 2px #FFD700;">Tennis Pride</span>
+            </h2>
+            
+            <!-- Description -->
+            <p class="text-xl md:text-2xl text-blue-100 max-w-2xl leading-relaxed font-light">
+                From the first steps on the international arena to historic victories at Grand Slams and the Olympic Games.
+            </p>
+        </div>
+    </header>
+
+    <!-- Content: Padding-top for spacing after full-width header -->
+    <div class="max-w-7xl mx-auto px-6 md:px-12 pt-32 pb-24">
+        <!-- History & Achievements -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+            <div class="space-y-8">
+                <h3 class="sport-font text-5xl text-[#3c4a8b] uppercase italic border-b-4 border-[#FFD700] inline-block">The Evolution of Excellence</h3>
+                
+                <div class="prose prose-lg text-gray-700 max-w-none space-y-6">
+                    <p>Ukrainian tennis has undergone a remarkable transformation from its post-Soviet roots in the early 1990s to becoming a dominant force on the global stage. What began with individual pioneers has grown into a systematic legacy of world-class athletes who consistently challenge the elite.</p>
+                    
+                    <p>The journey reached a historic peak when <strong>Elina Svitolina</strong> secured the Bronze Medal at the Tokyo 2020 Olympics, marking Ukraine's first-ever Olympic medal in tennis. This achievement cemented the nation's status as a powerhouse, particularly in the women's tour (WTA), where Ukraine regularly sees multiple players in the Top 50 and Top 100 rankings.</p>
+
+                    <h4 class="sport-font text-2xl text-[#3c4a8b] uppercase italic mt-8">Key Historical Milestones:</h4>
+                    <ul class="list-none space-y-4 p-0">
+                        <li class="flex items-start gap-4">
+                            <span class="mt-2 w-3 h-3 bg-[#3c4a8b] rotate-45 flex-shrink-0"></span>
+                            <span><strong>The Medvedev Era:</strong> In the 1990s, Andrei Medvedev reached the French Open final (1999) and achieved a career-high of World No. 4, proving that Ukrainian men could compete at the very highest level of the ATP.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="mt-2 w-3 h-3 bg-[#FFD700] rotate-45 flex-shrink-0"></span>
+                            <span><strong>Grand Slam Glory:</strong> The Bondarenko sisters (Alona and Kateryna) made history in 2008 by winning the Australian Open doubles title, the first Grand Slam trophy for independent Ukraine.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="mt-2 w-3 h-3 bg-[#3c4a8b] rotate-45 flex-shrink-0"></span>
+                            <span><strong>Doubles Specialization:</strong> Lyudmyla Kichenok has continued this tradition, winning the 2024 US Open and 2023 Wimbledon mixed doubles titles, becoming one of the most decorated doubles players in national history.</span>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <span class="mt-2 w-3 h-3 bg-[#FFD700] rotate-45 flex-shrink-0"></span>
+                            <span><strong>Team Success:</strong> Ukraine's national teams have consistently performed in the Davis Cup and Billie Jean King Cup, demonstrating incredible depth with players like Marta Kostyuk, Dayana Yastremska, and Anhelina Kalinina.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Side Cards / Stats -->
+            <div class="space-y-8 lg:sticky lg:top-8">
+                <div class="bg-[#3c4a8b] p-10 rounded-3xl shadow-xl relative overflow-hidden text-white">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-5 rounded-bl-full"></div>
+                    <h4 class="sport-font text-3xl mb-6 text-[#FFD700] italic">National Legacy</h4>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div>
+                            <p class="text-blue-200 text-xs uppercase tracking-widest mb-1">Combined Titles</p>
+                            <span class="text-3xl font-bold italic">150+</span>
+                        </div>
+                        <div>
+                            <p class="text-blue-200 text-xs uppercase tracking-widest mb-1">Peak Ranking</p>
+                            <span class="text-3xl font-bold italic">No. 3</span>
+                        </div>
+                        <div>
+                            <p class="text-blue-200 text-xs uppercase tracking-widest mb-1">GS Titles</p>
+                            <span class="text-3xl font-bold italic">3</span>
+                        </div>
+                        <div>
+                            <p class="text-blue-200 text-xs uppercase tracking-widest mb-1">Olympic Medals</p>
+                            <span class="text-3xl font-bold italic">1</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gray-100 p-8 rounded-2xl border-l-8 border-[#FFD700]">
+                    <h4 class="sport-font text-2xl mb-4 text-[#3c4a8b]">Spirit of the Game:</h4>
+                    <p class="italic text-gray-700 leading-relaxed text-lg">
+                        "Ukraine has repeatedly proven to be a powerhouse of talent despite all challenges. Our players represent resilience and an unbreakable spirit both on and off the court, serving as ambassadors for a nation that never gives up."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- Men's Legends -->
+    <section class="py-24 px-6 md:px-12 bg-gray-50">
+        <div class="mb-24">
+            <h3 class="sport-font text-3xl text-[#3c4a8b] mb-10 flex items-center gap-4">
+                <span class="w-12 h-1 bg-tennis-yellow"></span> Men's Legends
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Medvedev -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://zaxid.net/resources/photos/news/202508/1617934_3104653.jpg?20250828123023" alt="Andrei Medvedev"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Andrii Medvedev</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇺🇦 UKR</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Max Rank</p><span>No. 4</span></div>
+                            <div><p>Total Titles</p><span>11</span></div>
+                            <div><p>GS Best</p><span>Final (RG)</span></div>
+                        </div>
+                        <p class="description">The most successful male player in Ukraine's history, reaching the French Open final in 1999 and winning 4 Masters titles.</p>
+                    </div>
+                </div>
+                <!-- Stakhovsky -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://cdn.prod.website-files.com/65d79caf2c28c2d247e8ff88/667b99ecdbd35ae65e5127e3_1%D1%96.jpg" alt="Sergiy Stakhovsky"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Serhii Stakhovsky</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇺🇦 UKR</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Max Rank</p><span>No. 31</span></div>
+                            <div><p>Total Titles</p><span>8 (4S/4D)</span></div>
+                            <div><p>Famous Win</p><span>vs Federer</span></div>
+                        </div>
+                        <p class="description">Famed for his historic victory over Roger Federer at Wimbledon 2013 and winning 4 ATP singles titles.</p>
+                    </div>
+                </div>
+                <!-- Dolgopolov -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://btu.org.ua/uploads/posts/2021-05/1619863435_atp.jpg" alt="Alexandr Dolgopolov"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Oleksandr Dolgopolov</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇺🇦 UKR</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Max Rank</p><span>No. 13</span></div>
+                            <div><p>Total Titles</p><span>4 (3S/1D)</span></div>
+                            <div><p>GS Best</p><span>QF (AusOpen)</span></div>
+                        </div>
+                        <p class="description">A master of unconventional play known as "The Dog," reaching the Australian Open quarterfinals in 2011.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Women's Stars -->
+        <div class="mb-24">
+            <h3 class="sport-font text-3xl text-[#3c4a8b] mb-10 flex items-center gap-4">
+                <span class="w-12 h-1 bg-tennis-yellow"></span> Women's Stars
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Svitolina -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://ichef.bbci.co.uk/ace/standard/2048/cpsprodpb/af00/live/2a00d1c0-fb69-11f0-b385-5f48925de19a.jpg" alt="Elina Svitolina"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Elina Svitolina</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇺🇦 UKR</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Max Rank</p><span>No. 3</span></div>
+                            <div><p>WTA Titles</p><span>21</span></div>
+                            <div><p>Olympics</p><span>Bronze</span></div>
+                        </div>
+                        <p class="description">The greatest Ukrainian player of all time, winner of the 2018 WTA Finals and Olympic medalist.</p>
+                    </div>
+                </div>
+                <!-- Kostyuk -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://i.ytimg.com/vi/JfryaqTyV3o/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGFYgZShDMA8=&rs=AOn4CLByVUfnzfBXQC_gV8fJdHXxLzhOhg" alt="Marta Kostyuk"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Marta Kostyuk</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇺🇦 UKR</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Rank</p><span>Top 20</span></div>
+                            <div><p>Total Titles</p><span>5</span></div>
+                            <div><p>GS Best</p><span>QF</span></div>
+                        </div>
+                        <p class="description">Winner of the Austin WTA 250 and multiple doubles titles, a leader of the new generation.</p>
+                    </div>
+                </div>
+                <!-- Yastremska -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://www.tennisnet.com/fileadmin/_processed_/8/2/csm_Yastremska_Getty_80bd258d25.jpg" alt="Dayana Yastremska"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Dayana Yastremska</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇺🇦 UKR</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>WTA Titles</p><span>3</span></div>
+                            <div><p>WTA 125</p><span>1</span></div>
+                            <div><p>GS Best</p><span>SF (AusOpen)</span></div>
+                        </div>
+                        <p class="description">Winner of 3 WTA titles and the Kozerki 125, reaching the 2024 Australian Open SF.</p>
+                    </div>
+                </div>
+                <!-- Kalinina -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://i.guim.co.uk/img/media/07df696444969328d312cac38c816a78a8138bd8/0_45_4385_2631/master/4385.jpg?width=700&quality=85&auto=format&fit=max&s=fcb9a7d7b5681dd957499e9c4ebdbc56" alt="Anhelina Kalinina"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Anhelina Kalinina</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇺🇦 UKR</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>WTA 125</p><span>1 Title</span></div>
+                            <div><p>ITF Titles</p><span>15</span></div>
+                            <div><p>Max Rank</p><span>No. 25</span></div>
+                        </div>
+                        <p class="description">Winner of the Limoges 125 and finalist at the WTA 1000 in Rome, a clay court specialist.</p>
+                    </div>
+                </div>
+                <!-- Starodubtseva -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://www.pilotonline.com/wp-content/uploads/2024/01/TVP-L-SP-Starodubsteva-01.jpg?w=1800&resize=1800,1800" alt="Yuliia Starodubtseva"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Yuliia Starodubtseva</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇺🇦 UKR</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>ITF Titles</p><span>4 Singles</span></div>
+                            <div><p>ITF Doubles</p><span>3 Titles</span></div>
+                            <div><p>GS 2024</p><span>4/4 Qualies</span></div>
+                        </div>
+                        <p class="description">Made history in 2024 by qualifying for all 4 Grand Slams in a single season.</p>
+                    </div>
+                </div>
+                <!-- Oleksandra Oliynikova -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://btu.org.ua/uploads/posts/2026-02/1770151767_olyinikova.jpg" alt="Oleksandra Oliynikova"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Oleksandra Oliynikova</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇺🇦 UKR</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>ITF Titles</p><span>5 Singles</span></div>
+                            <div><p>ITF Doubles</p><span>2 Titles</span></div>
+                            <div><p>Progression</p><span>Active</span></div>
+                        </div>
+                        <p class="description">A rising force on the ITF circuit with multiple titles on clay, steadily climbing the WTA rankings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Doubles Excellence -->
+        <div>
+            <h3 class="sport-font text-3xl text-[#3c4a8b] mb-10 flex items-center gap-4">
+                <span class="w-12 h-1 bg-tennis-yellow"></span> Doubles Excellence
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                <!-- Kichenok Sisters -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://i2.obozrevatel.com/gallery/2023/11/2/lyudakichenok3104611553477970708539372042741190627761821n.jpg" alt="Kichenok Sisters"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Lyudmyla & Nadiia Kichenok</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇺🇦 UKR</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>WTA Titles</p><span>19 combined</span></div>
+                            <div><p>GS Titles</p><span>2 (L. Kichenok)</span></div>
+                            <div><p>Rank</p><span>Top 10</span></div>
+                        </div>
+                        <p class="description">Ukraine's elite doubles specialists. Lyudmyla is a US Open and Wimbledon champion.</p>
+                    </div>
+                </div>
+                <!-- Bondarenko Sisters -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://images.unian.net/pb/003/thumb_files/h_500/368977.jpg" alt="Bondarenko Sisters"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Alona & Kateryna Bondarenko</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇺🇦 UKR</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>GS Title</p><span>AusOpen 2008</span></div>
+                            <div><p>WTA Titles</p><span>6 Singles</span></div>
+                            <div><p>WTA Doubles</p><span>7 Titles</span></div>
+                        </div>
+                        <p class="description">Historic sisters who won Ukraine's first Grand Slam title and dominated the mid-2000s tour.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-[#1A4F30] py-20 px-6 md:px-12 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-px bg-white/10"></div>
+    
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-16 relative z-10">
+        
+        <div class="max-w-xs">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-12 h-12 bg-[#F2FF00] text-[#1A4F30] rounded-full flex items-center justify-center font-black text-xl">TL</div>
+                <span class="sport-font text-3xl tracking-tighter text-white">Tennis Legends</span>
+            </div>
+            <p class="text-white/50 text-sm leading-relaxed mb-8">
+                The most comprehensive digital archive of tennis history. Documenting every serve, volley, and legendary moment that shaped the game.
+            </p>
+            <div class="flex gap-4">
+                <div class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-[#F2FF00] hover:text-[#1A4F30] transition-all cursor-pointer">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-[#F2FF00] hover:text-[#1A4F30] transition-all cursor-pointer">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-24">
+            <div>
+                <h5 class="sport-font text-[#F2FF00] text-lg mb-6 tracking-widest">The Eras</h5>
+                <ul class="text-sm text-white/50 space-y-4 font-medium uppercase tracking-tighter">
+                    <li><a href="1970s.html" class="hover:text-[#F2FF00] transition-colors">1970s Wooden Classics</a></li>
+                    <li><a href="1980s.html" class="hover:text-[#F2FF00] transition-colors">1980s Graphite Revolution</a></li>
+                    <li><a href="1990s.html" class="hover:text-[#F2FF00] transition-colors">1990s Power Surge</a></li>
+                    <li><a href="2000s.html" class="hover:text-[#F2FF00] transition-colors">2000s Golden Era</a></li>
+                    <li><a href="2010s.html" class="hover:text-[#F2FF00] transition-colors">2010s Big Three Reign</a></li>
+                    <li><a href="2020s.html" class="hover:text-[#F2FF00] transition-colors">2020s Next Gen Rise</a></li>
+                </ul>
+            </div>
+
+             <div>
+                <h5 class="sport-font text-[#F2FF00] text-lg mb-6 tracking-widest">The Archive</h5>
+                <ul class="text-sm text-white/50 space-y-4 font-medium uppercase tracking-tighter">
+                    <li><a href="https://en.wikipedia.org/wiki/List_of_Grand_Slam_and_related_tennis_records" class="hover:text-[#F2FF00] transition-colors">Grand Slam Records</a></li>
+                    <li><a href="https://www.atptour.com/en/players?matchType=Singles&rank=Top%2010&region=all" class="hover:text-[#F2FF00] transition-colors">ATP Profiles</a></li>
+                    <li><a href="https://www.atptour.com/en/players?matchType=Singles&rank=Top%2010&region=all" class="hover:text-[#F2FF00] transition-colors">WTA Profiles</a></li>
+                    <li><a href="https://live-tennis.eu/en/wta-live-ranking" class="hover:text-[#F2FF00] transition-colors">Live ATP Rankings</a></li>
+                    <li><a href="https://live-tennis.eu/en/atp-live-ranking" class="hover:text-[#F2FF00] transition-colors">Live WTA Rankings</a></li>
+                </ul>
+            </div>
+
+            <div class="col-span-2 lg:col-span-1">
+                <h5 class="sport-font text-[#F2FF00] text-lg mb-6 tracking-widest font-black">Follow Pro Tours</h5>
+                <div class="space-y-5">
+                    <a href="https://www.instagram.com/wta" target="_blank" class="flex items-center gap-4 group">
+                        <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center group-hover:bg-[#F2FF00]/10 transition-colors">
+                            <i class="fa-brands fa-instagram text-white/40 group-hover:text-[#F2FF00]"></i>
+                        </div>
+                        <span class="text-xs text-white/60 group-hover:text-white uppercase font-black tracking-widest transition-colors">WTA Official</span>
+                    </a>
+                    <a href="https://www.instagram.com/atptour" target="_blank" class="flex items-center gap-4 group">
+                        <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center group-hover:bg-[#F2FF00]/10 transition-colors">
+                            <i class="fa-brands fa-instagram text-white/40 group-hover:text-[#F2FF00]"></i>
+                        </div>
+                        <span class="text-xs text-white/60 group-hover:text-white uppercase font-black tracking-widest transition-colors">ATP Tour Official</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-[10px] font-black text-white/20 uppercase tracking-[0.3em]">
+            © 2026 Tennis Legends Encyclopedia. Designed for history. Created by Veronika Lebedovska
+        </p>
+    </div>
+</footer>
+    <button id="to-top" class="fixed bottom-8 right-8 z-[100] bg-[#2D7A4D] text-tennis-yellow w-12 h-12 rounded-sm shadow-2xl flex items-center justify-center opacity-0 translate-y-10 pointer-events-none transition-all duration-500 hover:bg-court-green hover:scale-110 active:scale-95 group">
+    <i class="fa-solid fa-arrow-up text-xl group-hover:-translate-y-1 transition-transform"></i>
+    </button>
+    <script src="js/script.js"> </script>
+</body>
+</html>

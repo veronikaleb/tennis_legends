@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Legends: The Golden Eras | Interactive Encyclopedia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="court-bg">
+<header class="sticky top-0 z-50 bg-court-green text-white py-5 px-6 md:px-12 flex items-center justify-between shadow-xl">
+    <div class="flex items-center gap-3 shrink-0">
+        <svg class="w-8 h-8 text-tennis-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M4.32 17.68a7 7 0 0 1 9.36-9.36"></path>
+            <path d="M10.32 4.32a7 7 0 0 1 9.36 9.36"></path>
+        </svg>
+        <span class="sport-font text-2xl tracking-tighter"><a href="index.html">Tennis Legends</a></span>
+    </div>
+
+    <nav class="hidden lg:flex items-center gap-4 xl:gap-6 font-bold text-[10px] xl:text-xs tracking-widest uppercase">
+        <a href="index.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">Home</a>
+        <a href="#" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">Players</a>
+        <div class="flex items-center gap-3 border-x border-white/10 px-4">
+            <a href="1970s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">70s</a>
+            <a href="1980s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">80s</a>
+            <a href="1990s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">90s</a>
+            <a href="2000s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">00s</a>
+            <a href="2010s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">10s</a>
+            <a href="2020s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">20s</a>
+        </div>
+        <a href="ukrtennis.html" class="group flex items-center gap-2 px-4 py-2 border border-white/20 rounded-full hover:bg-white transition-all duration-300">
+            <span class="group-hover:text-black transition-colors duration-300">Ukrainian Tennis 🇺🇦</span>
+        </a>
+    </nav>
+
+    <div class="lg:hidden flex items-center">
+        <button id="open-menu" class="text-white focus:outline-none">
+            <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-court-green z-[100] translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col items-center justify-center gap-8">
+        <button id="close-menu" class="absolute top-6 right-6 text-white text-4xl">&times;</button>
+        <a href="#players" class="menu-link text-2xl font-bold uppercase tracking-widest hover:text-tennis-yellow">Players</a>
+        <div class="flex flex-col items-center gap-4 border-y border-white/10 py-6 w-full">
+            <a href="#70s" class="menu-link text-xl hover:text-tennis-yellow">1970s</a>
+            <a href="#80s" class="menu-link text-xl hover:text-tennis-yellow">1980s</a>
+            <a href="#90s" class="menu-link text-xl hover:text-tennis-yellow">1990s</a>
+            <a href="#00s" class="menu-link text-xl hover:text-tennis-yellow">2000s</a>
+            <a href="#10s" class="menu-link text-xl hover:text-tennis-yellow">2010s</a>
+            <a href="#20s" class="menu-link text-xl hover:text-tennis-yellow">2020s</a>
+        </div>
+        <a href="#ukraine" class="menu-link text-xl font-bold text-tennis-yellow border border-tennis-yellow px-6 py-3 rounded-full">Ukrainian Tennis 🇺🇦</a>
+    </div>
+</header>
+<!-- Hero Section (2020s - 90s Hard Style) -->
+<section class="relative min-h-[90vh] flex items-center px-6 md:px-12 py-20 overflow-hidden bg-[#3c4a8b]">
+    <div class="absolute inset-0 opacity-20 pointer-events-none z-0 surface-texture" style="background-image: url('https://www.transparenttextures.com/patterns/dark-matter.png');"></div>
+    <div class="absolute inset-0 z-0 court-lines-hard"></div>
+    <div class="absolute top-20 right-0 sport-font text-[11rem] md:text-[19rem] text-white opacity-10 select-none pointer-events-none z-0 italic font-black leading-[0.8] whitespace-nowrap">FUTURE</div>
+    <div class="max-w-5xl z-10 relative">
+        <div class="inline-block bg-tennis-yellow text-[#3c4a8b] px-4 py-1 font-black text-sm uppercase mb-6 italic shadow-sm">Digital Encyclopedia</div>
+        <h1 class="sport-font text-7xl md:text-[10rem] leading-[0.85] text-white mb-8">The Next <br><span class="text-transparent outline-white">Chapter</span></h1>
+        <p class="text-xl md:text-2xl text-blue-50 max-w-2xl mb-10 leading-relaxed drop-shadow-md">A generational shift where speed, power, and high-tech analytics define the champions of the future.</p>
+    </div>
+</section>
+
+<!-- Equipment Section 2020s -->
+<section class="py-24 px-6 md:px-12 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+        <div class="md:w-1/2">
+            <h2 class="sport-font text-5xl text-court-green mb-6 italic">Auxetic & Bio-Tech</h2>
+            <p class="text-gray-600 text-lg mb-8 leading-relaxed">Modern rackets feature Auxetic tech for better feel and eco-friendly bio-materials, designed for explosive power and extreme precision.</p>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <p class="font-black text-court-green uppercase text-xs mb-1">Tech</p>
+                    <p class="text-xl font-bold">Auxetic Frame</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <p class="font-black text-court-green uppercase text-xs mb-1">Stringing</p>
+                    <p class="text-xl font-bold">Hybrid Power</p>
+                </div>
+            </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+            <div class="relative w-72 h-72 md:w-80 md:h-80">
+                <div class="absolute inset-0 bg-blue-600/5 rounded-full scale-110"></div>
+                <div class="relative w-full h-full rounded-full border-8 border-white shadow-2xl overflow-hidden z-10">
+                    <img src="https://www.puntodebreak.com/sites/default/files/styles/epsa_detail_thumbail/public/2026-02/conclusiones-open-australia-2026.jpg?h=f0fe448e&itok=dSP2TWbS" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-4 -right-4 bg-[#3c4a8b] text-white px-6 py-2 font-black italic sport-font text-xl z-20 shadow-lg -rotate-12">New Gen</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Compact 2020s: The New Generation & Data -->
+<section class="relative flex items-center px-6 md:px-12 py-16 overflow-hidden bg-[#3c4a8b]">
+    <!-- Grid -->
+    <div class="absolute inset-0 z-0" 
+         style="background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), 
+                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px); 
+                background-size: 40px 40px;">
+    </div>
+    
+    <!-- Background Text -->
+    <div class="absolute top-10 left-0 -translate-x-10 sport-font text-[9rem] md:text-[14rem] text-white select-none pointer-events-none z-0 italic font-black opacity-5 whitespace-nowrap leading-none">
+        2020S
+    </div>
+    
+    <div class="max-w-6xl mx-auto w-full z-10 relative">
+        <div class="inline-block bg-[#FFD700] text-[#3c4a8b] px-3 py-0.5 font-black text-xs uppercase mb-4 italic shadow-sm">
+            Digital & Velocity
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div class="order-2 md:order-1 bg-white/5 p-6 rounded-xl backdrop-blur-sm border border-white/10">
+                <p class="italic text-blue-100 text-base">"The game is now decided in milliseconds. The new generation creates their own history here and now."</p>
+            </div>
+            
+            <div class="order-1 md:order-2 text-right">
+                <h2 class="sport-font text-5xl md:text-7xl leading-[0.85] text-white mb-6 uppercase italic">
+                    Modern <br><span class="text-transparent" style="-webkit-text-stroke: 1.5px #FFD700;">Velocity</span>
+                </h2>
+                <p class="text-lg text-blue-50 font-light leading-snug mb-4">
+                    The dawn of the Alcaraz and Sinner era, driven by Big Data and advanced sports science.
+                </p>
+                <div class="flex flex-wrap gap-4 text-xs font-bold uppercase tracking-wider text-blue-200 justify-end">
+                    <span class="flex items-center gap-2">Electronic Calling <span class="w-1.5 h-1.5 bg-[#FFD700] rotate-45"></span></span>
+                    <span class="flex items-center gap-2">Generational Shift <span class="w-1.5 h-1.5 bg-[#FFD700] rotate-45"></span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hall of Fame 2020s -->
+<section class="py-24 px-6 md:px-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="sport-font text-6xl text-court-green mb-16 italic text-center uppercase">2020s Hall of Fame</h2>
+
+        <!-- Men's Singles (6 Players) -->
+        <div class="mb-20">
+            <h3 class="sport-font text-3xl text-[#3c4a8b] mb-10 flex items-center gap-4">
+                <span class="w-12 h-1 bg-tennis-yellow"></span> Men's Singles
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Alcaraz -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://cdn.britannica.com/43/262443-050-3540F96E/carlos-alcaraz-poses-with-the-gentlemens-single-tropy-at-wimbledon-2024.jpg" alt="Carlos Alcaraz"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Carlos Alcaraz</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇪🇸 Spain</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>May 5, 2003</span></div>
+                            <div><p>Total Titles</p><span>15</span></div>
+                            <div><p>Grand Slams</p><span>4</span></div>
+                            <div><p>Olympic Medal</p><span>Silver</span></div>
+                        </div>
+                        <p class="description">The youngest World No. 1 in history, securing major titles on every surface before age 21.</p>
+                    </div>
+                </div>
+                <!-- Sinner -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://ichef.bbci.co.uk/ace/standard/3840/cpsprodpb/c3c9/live/af916090-4bda-11f1-b55d-0f258dce1735.jpg" alt="Jannik Sinner"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Jannik Sinner</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇮🇹 Italy</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Aug 16, 2001</span></div>
+                            <div><p>Total Titles</p><span>18</span></div>
+                            <div><p>Grand Slams</p><span>2</span></div>
+                            <div><p>Ranking</p><span>No. 1</span></div>
+                        </div>
+                        <p class="description">Italy's first World No. 1, known for his clinical baseline dominance and mental fortitude.</p>
+                    </div>
+                </div>
+                <!-- Zverev -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://www.atptour.com/-/media/images/news/2026/04/29/00/32/zverev-madrid-2026-r4-fist-pump.jpg" alt="Alexander Zverev"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Alexander Zverev</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇩🇪 Germany</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Apr 20, 1997</span></div>
+                            <div><p>Total Titles</p><span>24</span></div>
+                            <div><p>Grand Slams</p><span>Finalist</span></div>
+                            <div><p>Olympic Gold</p><span>1</span></div>
+                        </div>
+                        <p class="description">A consistent force in the Top 5, boasting a massive serve and an Olympic gold medal.</p>
+                    </div>
+                </div>
+                <!-- Tsitsipas -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://i.guim.co.uk/img/media/181b1ef8c08c3ce63a7c9cf81c255c423fb0f131/0_138_2879_1727/master/2879.jpg?width=1200&height=900&quality=85&auto=format&fit=crop&s=7a0c1738baa3d075ebb1d75b386b4d22" alt="Stefanos Tsitsipas"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Stefanos Tsitsipas</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇬🇷 Greece</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Aug 12, 1998</span></div>
+                            <div><p>Total Titles</p><span>15</span></div>
+                            <div><p>Grand Slams</p><span>2 Finals</span></div>
+                            <div><p>ATP Finals</p><span>1 Title</span></div>
+                        </div>
+                        <p class="description">Master of the one-handed backhand and three-time Monte Carlo champion.</p>
+                    </div>
+                </div>
+                <!-- Ruud -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://mutuamadridopen.com/wp-content/uploads/2025/05/FT1_1376.jpg" alt="Casper Ruud"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Casper Ruud</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇳🇴 Norway</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Dec 22, 1998</span></div>
+                            <div><p>Total Titles</p><span>12</span></div>
+                            <div><p>Grand Slams</p><span>3 Finals</span></div>
+                            <div><p>Ranking</p><span>Top 10</span></div>
+                        </div>
+                        <p class="description">The king of consistency on clay, having reached multiple major finals in the 2020s.</p>
+                    </div>
+                </div>
+                <!-- Fritz -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://assets.vogue.com/photos/66cb5d5152a1060968c93539/3:2/w_3375,h_2250,c_limit/SpringSummer24_BOSS_Taylor_Fritz_001_16x9__original.jpeg" alt="Taylor Fritz"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Taylor Fritz</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇺🇸 USA</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Oct 28, 1997</span></div>
+                            <div><p>Total Titles</p><span>8</span></div>
+                            <div><p>Grand Slams</p><span>Finalist</span></div>
+                            <div><p>Ranking</p><span>No. 1 USA</span></div>
+                        </div>
+                        <p class="description">Leading the American tennis resurgence with a powerful serve and elite baseline play.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Women's Singles (6 Players) -->
+        <div class="mb-20">
+            <h3 class="sport-font text-3xl text-[#3c4a8b] mb-10 flex items-center gap-4">
+                <span class="w-12 h-1 bg-tennis-yellow"></span> Women's Singles
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Swiatek -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://r.testifier.nl/Acbs8526SDKI/resizing_type:fill/watermark:Picture%3A+Proshots/plain/https%3A%2F%2Fs3-newsifier.ams3.digitaloceanspaces.com%2Ftennisuptodate.com%2Fimages%2F2026-05%2Figa-swiatek-rome-open-2026-6a0194677606c.jpg@webp" alt="Iga Swiatek"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Iga Swiatek</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇵🇱 Poland</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>May 31, 2001</span></div>
+                            <div><p>Total Titles</p><span>22</span></div>
+                            <div><p>Grand Slams</p><span>5</span></div>
+                            <div><p>Olympic Medal</p><span>Bronze</span></div>
+                        </div>
+                        <p class="description">The most dominant force on clay since Henin, with a career defined by efficiency.</p>
+                    </div>
+                </div>
+                <!-- Sabalenka -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://ichef.bbci.co.uk/ace/standard/2560/cpsprodpb/7c83/live/0e5d1750-d7e1-11ef-859d-37bc8d58e371.jpg" alt="Aryna Sabalenka"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Aryna Sabalenka</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">⬜🟥⬜ Belarus</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>May 5, 1998</span></div>
+                            <div><p>Total Titles</p><span>22</span></div>
+                            <div><p>Grand Slams</p><span>3</span></div>
+                            <div><p>Status</p><span>Elite</span></div>
+                        </div>
+                        <p class="description">Combining raw power with newfound mental stability to dominate hard courts.</p>
+                    </div>
+                </div>
+                <!-- Rybakina -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://r.testifier.nl/Acbs8526SDKI/resizing_type:fit/watermark:TPN/width:3840/height:2560/plain/https://s3-newsifier.ams3.digitaloceanspaces.com/tennisinfinitycom/images/2024-04/rybakina-elena-miami24-tpn-662648e5c9527.jpg@webp" alt="Elena Rybakina"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Elena Rybakina</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇰🇿 Kazakhstan</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>June 17, 1999</span></div>
+                            <div><p>Total Titles</p><span>8</span></div>
+                            <div><p>Grand Slams</p><span>2</span></div> <!-- Updated based on user feedback/future projection -->
+                            <div><p>Olympic Medal</p><span>4th Place</span></div>
+                        </div>
+                        <p class="description">Possessing a lethal serve and ice-cold composure under pressure.</p>
+                    </div>
+                </div>
+                <!-- Gauff -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://hips.hearstapps.com/hmg-prod/images/coco-gauff-holding-her-trophy-after-defeating-aryna-news-photo-1694448923.jpg" alt="Coco Gauff"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Coco Gauff</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇺🇸 USA</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Mar 13, 2004</span></div>
+                            <div><p>Total Titles</p><span>17</span></div>
+                            <div><p>Grand Slams</p><span>2</span></div>
+                            <div><p>Ranking</p><span>Top 3</span></div>
+                        </div>
+                        <p class="description">A phenomenal defensive player with elite speed and a Grand Slam title in both formats.</p>
+                    </div>
+                </div>
+                <!-- Paolini -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://www.claytenis.com/wp-content/uploads/2026/05/Jasmine-Paolini-entrevista-CLAY-1024x782.jpeg" alt="Jasmine Paolini"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Jasmine Paolini</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇮🇹 Italy</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Jan 4, 1996</span></div>
+                            <div><p>Total Titles</p><span>10</span></div>
+                            <div><p>Grand Slams</p><span>2 Finals</span></div>
+                            <div><p>Olympic Gold</p><span>1 (Dbl)</span></div>
+                        </div>
+                        <p class="description">The breakout star of 2024, proving that tenacity and heart can reach any final.</p>
+                    </div>
+                </div>
+                <!-- Pegula -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://www.creditonecharlestonopen.com/wp-content/uploads/2025/04/CS3_6110-e1743609184157-1200x1080.jpg" alt="Jessica Pegula"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Jessica Pegula</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇺🇸 USA</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Feb 24, 1994</span></div>
+                            <div><p>Total Titles</p><span>14</span></div>
+                            <div><p>Grand Slams</p><span>Finalist</span></div>
+                            <div><p>Ranking</p><span>Top 5</span></div>
+                        </div>
+                        <p class="description">Technically flawless and consistently ranked as one of the hardest players to beat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Doubles Masters (6 Players) -->
+        <div>
+            <h3 class="sport-font text-3xl text-[#3c4a8b] mb-10 flex items-center gap-4">
+                <span class="w-12 h-1 bg-tennis-yellow"></span> Doubles Masters
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Mate Pavic -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://ausopen.com/sites/default/files/trading-cards/2026/a0_dodge5125-1.jpg" alt="Mate Pavic"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Mate Pavić</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇭🇷 Croatia</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>July 4, 1993</span></div>
+                            <div><p>Total Titles</p><span>38</span></div>
+                            <div><p>Grand Slams</p><span>7</span></div>
+                            <div><p>Olympic Gold</p><span>1</span></div>
+                        </div>
+                        <p class="description">Completed the Career Golden Slam in doubles; an all-time great of the modern era.</p>
+                    </div>
+                </div>
+                <!-- Katerina Siniakova -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://d17-a.sdn.cz/d_17/c_img_m3_A/nPt0vAiT3tDxFrxg9BzCLyV/c572.jpeg?fl=cro,186,33,2688,1792%7Cres,1200,,1%7Cjpg,80,,1" alt="Katerina Siniakova"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Kateřina Siniaková</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇨🇿 Czechia</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>May 10, 1996</span></div>
+                            <div><p>Total Titles</p><span>32</span></div>
+                            <div><p>Grand Slams</p><span>9</span></div>
+                            <div><p>Olympic Gold</p><span>2</span></div>
+                        </div>
+                        <p class="description">Widely considered the best doubles player in the world with unmatched versatility.</p>
+                    </div>
+                </div>
+                <!-- Sara Errani -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://images.tennis.com/image/upload/t_1-1_768/f_auto/v1685048384/tenniscom-prd/assets/Player-Hero/Sara_Errani_hero_wzptag.jpg" alt="Sara Errani"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Sara Errani</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇮🇹 Italy</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Apr 29, 1987</span></div>
+                            <div><p>Total Titles</p><span>41</span></div>
+                            <div><p>Grand Slams</p><span>5</span></div>
+                            <div><p>Olympic Gold</p><span>1</span></div>
+                        </div>
+                        <p class="description">Secured her Career Golden Slam at the Paris Olympics, a testament to her longevity.</p>
+                    </div>
+                </div>
+                <!-- Marcelo Arevalo -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://www.claytenis.com/wp-content/uploads/2025/06/Marcelo-Arevalo.jpg" alt="Marcelo Arevalo"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Marcelo Arévalo</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇸🇻 El Salvador</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Oct 17, 1990</span></div>
+                            <div><p>Total Titles</p><span>16</span></div>
+                            <div><p>Grand Slams</p><span>2</span></div>
+                            <div><p>Ranking</p><span>No. 1</span></div>
+                        </div>
+                        <p class="description">A doubles powerhouse who made history for El Salvador on the Grand Slam stage.</p>
+                    </div>
+                </div>
+                <!-- Taylor Townsend -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://justwomenssports.com/wp-content/smush-webp/2026/04/GettyImages-2272622399-1024x683.jpg.webp" alt="Taylor Townsend"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Taylor Townsend</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇺🇸 USA</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Apr 16, 1996</span></div>
+                            <div><p>Total Titles</p><span>7</span></div>
+                            <div><p>Grand Slams</p><span>1</span></div>
+                            <div><p>Ranking</p><span>Elite Dbls</span></div>
+                        </div>
+                        <p class="description">Bringing back the art of serve-and-volley with incredible feel and tactical smarts.</p>
+                    </div>
+                </div>
+                <!-- Storm Hunter -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://live-production.wcms.abc-cdn.net.au/90d6fbb1ae62d3a8a5e1226525710b0b?impolicy=wcms_crop_resize&cropH=1191&cropW=2117&xPos=0&yPos=138&width=862&height=485" alt="Storm Hunter"></div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="sport-font text-2xl text-court-green">Storm Hunter</h4>
+                            <span class="text-sm font-bold bg-gray-200 px-2 py-1 rounded">🇦🇺 Australia</span>
+                        </div>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Apr 11, 1994</span></div>
+                            <div><p>Total Titles</p><span>8</span></div>
+                            <div><p>Grand Slams</p><span>1 (Mixed)</span></div>
+                            <div><p>Ranking</p><span>Former No. 1</span></div>
+                        </div>
+                        <p class="description">An elite doubles tactician who reached the top of the WTA doubles rankings.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-[#1A4F30] py-20 px-6 md:px-12 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-px bg-white/10"></div>
+    
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-16 relative z-10">
+        
+        <div class="max-w-xs">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-12 h-12 bg-[#F2FF00] text-[#1A4F30] rounded-full flex items-center justify-center font-black text-xl">TL</div>
+                <span class="sport-font text-3xl tracking-tighter text-white">Tennis Legends</span>
+            </div>
+            <p class="text-white/50 text-sm leading-relaxed mb-8">
+                The most comprehensive digital archive of tennis history. Documenting every serve, volley, and legendary moment that shaped the game.
+            </p>
+            <div class="flex gap-4">
+                <div class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-[#F2FF00] hover:text-[#1A4F30] transition-all cursor-pointer">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-[#F2FF00] hover:text-[#1A4F30] transition-all cursor-pointer">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-24">
+            <div>
+                <h5 class="sport-font text-[#F2FF00] text-lg mb-6 tracking-widest">The Eras</h5>
+                <ul class="text-sm text-white/50 space-y-4 font-medium uppercase tracking-tighter">
+                    <li><a href="1970s.html" class="hover:text-[#F2FF00] transition-colors">1970s Wooden Classics</a></li>
+                    <li><a href="1980s.html" class="hover:text-[#F2FF00] transition-colors">1980s Graphite Revolution</a></li>
+                    <li><a href="1990s.html" class="hover:text-[#F2FF00] transition-colors">1990s Power Surge</a></li>
+                    <li><a href="2000s.html" class="hover:text-[#F2FF00] transition-colors">2000s Golden Era</a></li>
+                    <li><a href="2010s.html" class="hover:text-[#F2FF00] transition-colors">2010s Big Three Reign</a></li>
+                    <li><a href="2020s.html" class="hover:text-[#F2FF00] transition-colors">2020s Next Gen Rise</a></li>
+                </ul>
+            </div>
+
+             <div>
+                <h5 class="sport-font text-[#F2FF00] text-lg mb-6 tracking-widest">The Archive</h5>
+                <ul class="text-sm text-white/50 space-y-4 font-medium uppercase tracking-tighter">
+                    <li><a href="https://en.wikipedia.org/wiki/List_of_Grand_Slam_and_related_tennis_records" class="hover:text-[#F2FF00] transition-colors">Grand Slam Records</a></li>
+                    <li><a href="https://www.atptour.com/en/players?matchType=Singles&rank=Top%2010&region=all" class="hover:text-[#F2FF00] transition-colors">ATP Profiles</a></li>
+                    <li><a href="https://www.atptour.com/en/players?matchType=Singles&rank=Top%2010&region=all" class="hover:text-[#F2FF00] transition-colors">WTA Profiles</a></li>
+                    <li><a href="https://live-tennis.eu/en/wta-live-ranking" class="hover:text-[#F2FF00] transition-colors">Live ATP Rankings</a></li>
+                    <li><a href="https://live-tennis.eu/en/atp-live-ranking" class="hover:text-[#F2FF00] transition-colors">Live WTA Rankings</a></li>
+                </ul>
+            </div>
+
+            <div class="col-span-2 lg:col-span-1">
+                <h5 class="sport-font text-[#F2FF00] text-lg mb-6 tracking-widest font-black">Follow Pro Tours</h5>
+                <div class="space-y-5">
+                    <a href="https://www.instagram.com/wta" target="_blank" class="flex items-center gap-4 group">
+                        <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center group-hover:bg-[#F2FF00]/10 transition-colors">
+                            <i class="fa-brands fa-instagram text-white/40 group-hover:text-[#F2FF00]"></i>
+                        </div>
+                        <span class="text-xs text-white/60 group-hover:text-white uppercase font-black tracking-widest transition-colors">WTA Official</span>
+                    </a>
+                    <a href="https://www.instagram.com/atptour" target="_blank" class="flex items-center gap-4 group">
+                        <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center group-hover:bg-[#F2FF00]/10 transition-colors">
+                            <i class="fa-brands fa-instagram text-white/40 group-hover:text-[#F2FF00]"></i>
+                        </div>
+                        <span class="text-xs text-white/60 group-hover:text-white uppercase font-black tracking-widest transition-colors">ATP Tour Official</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-[10px] font-black text-white/20 uppercase tracking-[0.3em]">
+            © 2026 Tennis Legends Encyclopedia. Designed for history. Created by Veronika Lebedovska
+        </p>
+    </div>
+</footer>
+    <button id="to-top" class="fixed bottom-8 right-8 z-[100] bg-[#2D7A4D] text-tennis-yellow w-12 h-12 rounded-sm shadow-2xl flex items-center justify-center opacity-0 translate-y-10 pointer-events-none transition-all duration-500 hover:bg-court-green hover:scale-110 active:scale-95 group">
+    <i class="fa-solid fa-arrow-up text-xl group-hover:-translate-y-1 transition-transform"></i>
+    </button>
+    <script src="js/script.js"> </script>
+</body>
+</html>

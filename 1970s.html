@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Legends: The Golden Eras | Interactive Encyclopedia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="court-bg">
+<header class="sticky top-0 z-50 bg-court-green text-white py-5 px-6 md:px-12 flex items-center justify-between shadow-xl">
+    <div class="flex items-center gap-3 shrink-0">
+        <svg class="w-8 h-8 text-tennis-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M4.32 17.68a7 7 0 0 1 9.36-9.36"></path>
+            <path d="M10.32 4.32a7 7 0 0 1 9.36 9.36"></path>
+        </svg>
+        <span class="sport-font text-2xl tracking-tighter"><a href="index.html">Tennis Legends</a></span>
+    </div>
+
+    <nav class="hidden lg:flex items-center gap-4 xl:gap-6 font-bold text-[10px] xl:text-xs tracking-widest uppercase">
+        <a href="index.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">Home</a>
+        <a href="#" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">Players</a>
+        <div class="flex items-center gap-3 border-x border-white/10 px-4">
+            <a href="1970s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">70s</a>
+            <a href="1980s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">80s</a>
+            <a href="1990s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">90s</a>
+            <a href="2000s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">00s</a>
+            <a href="2010s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">10s</a>
+            <a href="2020s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">20s</a>
+        </div>
+        <a href="ukrtennis.html" class="group flex items-center gap-2 px-4 py-2 border border-white/20 rounded-full hover:bg-white transition-all duration-300">
+            <span class="group-hover:text-black transition-colors duration-300">Ukrainian Tennis 🇺🇦</span>
+        </a>
+    </nav>
+
+    <div class="lg:hidden flex items-center">
+        <button id="open-menu" class="text-white focus:outline-none">
+            <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-court-green z-[100] translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col items-center justify-center gap-8">
+        <button id="close-menu" class="absolute top-6 right-6 text-white text-4xl">&times;</button>
+        <a href="#players" class="menu-link text-2xl font-bold uppercase tracking-widest hover:text-tennis-yellow">Players</a>
+        <div class="flex flex-col items-center gap-4 border-y border-white/10 py-6 w-full">
+            <a href="#70s" class="menu-link text-xl hover:text-tennis-yellow">1970s</a>
+            <a href="#80s" class="menu-link text-xl hover:text-tennis-yellow">1980s</a>
+            <a href="#90s" class="menu-link text-xl hover:text-tennis-yellow">1990s</a>
+            <a href="#00s" class="menu-link text-xl hover:text-tennis-yellow">2000s</a>
+            <a href="#10s" class="menu-link text-xl hover:text-tennis-yellow">2010s</a>
+            <a href="#20s" class="menu-link text-xl hover:text-tennis-yellow">2020s</a>
+        </div>
+        <a href="#ukraine" class="menu-link text-xl font-bold text-tennis-yellow border border-tennis-yellow px-6 py-3 rounded-full">Ukrainian Tennis 🇺🇦</a>
+    </div>
+</header>
+
+  <!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center px-6 md:px-12 py-20 overflow-hidden bg-court-green">
+    <div class="absolute inset-0 opacity-20 pointer-events-none z-0 surface-texture"></div>
+    <div class="absolute inset-0 z-0 court-lines"></div>
+
+    <div class="absolute top-20 right-0 translate-x-0 md:-translate-x-10 sport-font text-[11rem] md:text-[19rem] text-white opacity-10 select-none pointer-events-none z-0 italic font-black leading-[0.8] whitespace-nowrap">
+        VINTAGE
+    </div>
+    <div class="max-w-5xl z-10 relative">
+        <div class="inline-block bg-tennis-yellow text-court-green px-4 py-1 font-black text-sm uppercase mb-6 italic shadow-sm">
+            Digital Encyclopedia
+        </div>
+        <h1 class="sport-font text-7xl md:text-[10rem] leading-[0.85] text-white mb-8">
+            The Golden <br><span class="text-transparent outline-white">Seventies</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-100 max-w-2xl mb-10 leading-relaxed drop-shadow-md">
+            A decade of revolution where tennis transitioned into the Open Era, defined by wooden rackets, white attire, and the rise of global icons.
+        </p>
+    </div>
+</section>
+
+<!-- Equipment Section -->
+<section class="py-24 px-6 md:px-12 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+        <div class="md:w-1/2">
+            <h2 class="sport-font text-5xl text-court-green mb-6 italic">The Wooden Rackets</h2>
+            <p class="text-gray-600 text-lg mb-8 leading-relaxed">
+                Before the era of composites, the 70s belonged to wood. Rackets were crafted from layers of ash, maple, and okoume. They featured small 65-square-inch heads, offering a tiny "sweet spot" that demanded perfect timing and technique.
+            </p>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <p class="font-black text-court-green uppercase text-xs mb-1">Standard Weight</p>
+                    <p class="text-xl font-bold">380g - 410g</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <p class="font-black text-court-green uppercase text-xs mb-1">Head Size</p>
+                    <p class="text-xl font-bold">~65 sq. in.</p>
+                </div>
+            </div>
+        </div>
+       <div class="md:w-1/2 flex justify-center">
+    <div class="relative w-72 h-72 md:w-80 md:h-80">
+        <!-- Декоративне коло на фоні -->
+        <div class="absolute inset-0 bg-tennis-yellow/10 rounded-full scale-110 animate-pulse"></div>
+        
+        <!-- Контейнер для фото -->
+        <div class="relative w-full h-full rounded-full border-8 border-white shadow-2xl overflow-hidden z-10">
+            <img 
+                src="https://cdn.shopify.com/s/files/1/1248/6269/files/close-up-of-wooden-rackets-with-tennis-ball-2021-08-28-17-57-27-utc_600x600.jpg?v=1688400466" 
+                alt="Vintage Wooden Racket" 
+                class="w-full h-full object-cover"
+            >
+            <!-- Оверлей для стилю -->
+            <div class="absolute inset-0 bg-court-green/10 mix-blend-multiply"></div>
+        </div>
+
+        <!-- Бейдж -->
+        <div class="absolute -bottom-4 -right-4 bg-tennis-yellow text-court-green px-6 py-2 font-black italic sport-font text-xl z-20 shadow-lg -rotate-12">
+            Vintage Craft
+        </div>
+    </div>
+</div>
+    </div>
+</section>
+<!-- History Section -->
+<section class="py-24 px-6 md:px-12 bg-court-green text-white">
+    <div class="max-w-4xl mx-auto text-center">
+        <h2 class="sport-font text-5xl mb-8 italic">The Era of Change</h2>
+        <div class="w-24 h-1.5 bg-tennis-yellow mx-auto mb-10"></div>
+        <p class="text-lg md:text-xl leading-relaxed opacity-90">
+            The 1970s marked the true beginning of professional tennis as we know it. This was the decade of the "Tennis Boom," characterized by the first massive sponsorship deals, the establishment of the ATP and WTA rankings, and a surge in television popularity. It was a time when players became rockstars, bringing charisma and fierce rivalries to the court.
+        </p>
+    </div>
+</section>
+<!-- Hall of Fame 1970s -->
+<section class="py-24 px-6 md:px-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="sport-font text-6xl text-court-green text-center mb-20 italic">1970s Hall of Fame</h2>
+        
+        <!-- Men's Singles -->
+        <div class="mb-20">
+            <h3 class="sport-font text-3xl text-court-green mb-10 flex items-center gap-4">
+                <span class="w-12 h-1 bg-tennis-yellow"></span> Men's Singles
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Bjorn Borg -->
+                <div class="player-card-70s">
+                    <div class="img-container">
+                        <img src="https://lavercup.com/wp-content/uploads/2024/09/CB1_8206_ANE2F6Is_20240917010437-1200x726.jpg" alt="Bjorn Borg">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="sport-font text-2xl text-court-green">Björn Borg</h4>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>June 6, 1956</span></div>
+                            <div><p>Country</p><span>Sweden</span></div>
+                            <div><p>Total Titles</p><span>105</span></div> <!-- 101 Singles + 4 Doubles -->
+                            <div><p>Grand Slams</p><span>11</span></div>
+                        </div>
+                        <p class="description">The "Ice Man" of tennis, known for his baseline dominance and cool temperament under pressure.</p>
+                    </div>
+                </div>
+                <!-- Jimmy Connors -->
+                <div class="player-card-70s">
+                    <div class="img-container">
+                        <img src="https://longislandtennismagazine.com/wp-content/uploads/2017/09/Jimmy_Connors_Pic.jpg" alt="Jimmy Connors">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="sport-font text-2xl text-court-green">Jimmy Connors</h4>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Sept 2, 1952</span></div>
+                            <div><p>Country</p><span>USA</span></div>
+                            <div><p>Total Titles</p><span>125</span></div> <!-- 109 Singles + 16 Doubles -->
+                            <div><p>Grand Slams</p><span>8</span></div>
+                        </div>
+                        <p class="description">A fiery competitor with a flat two-handed backhand who held the No. 1 ranking for 160 consecutive weeks.</p>
+                    </div>
+                </div>
+                <!-- John McEnroe -->
+                <div class="player-card-70s">
+                    <div class="img-container">
+                        <img src="https://static01.nyt.com/images/2017/07/15/sports/15mcenroe-web/15mcenroe-web-superJumbo.jpg" alt="John McEnroe">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="sport-font text-2xl text-court-green">John McEnroe</h4>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Feb 16, 1959</span></div>
+                            <div><p>Country</p><span>USA</span></div>
+                            <div><p>Total Titles</p><span>155</span></div> <!-- 77 Singles + 78 Doubles -->
+                            <div><p>Grand Slams</p><span>7</span></div>
+                        </div>
+                        <p class="description">Famous for his incredible touch, volleying skills, and legendary "You cannot be serious!" outbursts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Women's Singles -->
+        <div class="mb-20">
+            <h3 class="sport-font text-3xl text-court-green mb-10 flex items-center gap-4">
+                <span class="w-12 h-1 bg-tennis-yellow"></span> Women's Singles
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Martina Navratilova -->
+                <div class="player-card-70s">
+                    <div class="img-container">
+                        <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2015/05/04/19/54-Martina-Navratilova.jpg?width=1200" alt="Martina Navratilova">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="sport-font text-2xl text-court-green">Martina Navratilova</h4>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Oct 18, 1956</span></div>
+                            <div><p>Country</p><span>CZE / USA</span></div>
+                            <div><p>Total Titles</p><span>344</span></div> <!-- 167 Singles + 177 Doubles -->
+                            <div><p>Grand Slams</p><span>18</span></div>
+                        </div>
+                        <p class="description">The ultimate serve-and-volleyer who brought unprecedented athleticism and fitness to the women's game.</p>
+                    </div>
+                </div>
+                <!-- Billie Jean King -->
+                <div class="player-card-70s">
+                    <div class="img-container">
+                        <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/rockcms/2025-04/250401-billie-jean-king-vl-1258p-35116d.jpg" alt="Billie Jean King">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="sport-font text-2xl text-court-green">Billie Jean King</h4>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Nov 22, 1943</span></div>
+                            <div><p>Country</p><span>USA</span></div>
+                            <div><p>Total Titles</p><span>230</span></div> <!-- 129 Singles + 101 Doubles (Approx Open Era + Pre-Open) -->
+                            <div><p>Grand Slams</p><span>12</span></div>
+                        </div>
+                        <p class="description">A pioneer for gender equality and the winner of the famous "Battle of the Sexes" match in 1973.</p>
+                    </div>
+                </div>
+                <!-- Evonne Goolagong -->
+                <div class="player-card-70s">
+                    <div class="img-container">
+                        <img src="https://live-production.wcms.abc-cdn.net.au/6bd6e1a63a677c84fe00aaa182f2c811?impolicy=wcms_crop_resize&cropH=2667&cropW=4000&xPos=0&yPos=0&width=862&height=575" alt="Evonne Goolagong">
+                    </div>
+                    <div class="p-6">
+                        <h4 class="sport-font text-2xl text-court-green">Evonne Goolagong</h4>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>July 31, 1951</span></div>
+                            <div><p>Country</p><span>Australia</span></div>
+                            <div><p>Total Titles</p><span>92</span></div> <!-- 86 Singles + 6 Doubles -->
+                            <div><p>Grand Slams</p><span>7</span></div>
+                        </div>
+                        <p class="description">Known for her grace and "walkabout" style of play, she was the first Indigenous Australian to win a Grand Slam.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Doubles Stars -->
+        <div>
+            <h3 class="sport-font text-3xl text-court-green mb-10 flex items-center gap-4">
+                <span class="w-12 h-1 bg-tennis-yellow"></span> Doubles Legends
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Rosie Casals -->
+                <div class="player-card-70s flex-row-layout">
+                    <div class="md:w-1/3 img-container">
+                        <img src="https://cdn0.scrvt.com/c2465e9022ba946df66d1244a69b1c75/512c80791b12bafa/96a2d1b163f1/v/ebfe13c20e19/p_0300_20_C7_004_o2.jpg" alt="Rosie Casals">
+                    </div>
+                    <div class="md:w-2/3 p-6">
+                        <h4 class="sport-font text-2xl text-court-green">Rosie Casals</h4>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Sept 16, 1948</span></div>
+                            <div><p>Country</p><span>USA</span></div>
+                            <div><p>Total Titles</p><span>124</span></div> <!-- 12 Singles + 112 Doubles -->
+                            <div><p>Grand Slams</p><span>12 (Dbl)</span></div>
+                        </div>
+                        <p class="description">One of the most exciting doubles players in history, winning 112 professional doubles titles.</p>
+                    </div>
+                </div>
+                <!-- Stan Smith -->
+                <div class="player-card-70s flex-row-layout">
+                    <div class="md:w-1/3 img-container">
+                        <img src="https://specials-images.forbesimg.com/imageserve/452833258/960x0.jpg" alt="Stan Smith">
+                    </div>
+                    <div class="md:w-2/3 p-6">
+                        <h4 class="sport-font text-2xl text-court-green">Stan Smith</h4>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Dec 14, 1946</span></div>
+                            <div><p>Country</p><span>USA</span></div>
+                            <div><p>Total Titles</p><span>110</span></div> <!-- 48 Singles + 62 Doubles (Open Era) -->
+                            <div><p>Grand Slams</p><span>2 (S) / 5 (D)</span></div>
+                        </div>
+                        <p class="description">A dominant force in both singles and doubles, forever immortalized by his iconic Adidas sneakers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<footer class="bg-[#1A4F30] py-20 px-6 md:px-12 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-px bg-white/10"></div>
+    
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-16 relative z-10">
+        
+        <div class="max-w-xs">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-12 h-12 bg-[#F2FF00] text-[#1A4F30] rounded-full flex items-center justify-center font-black text-xl">TL</div>
+                <span class="sport-font text-3xl tracking-tighter text-white">Tennis Legends</span>
+            </div>
+            <p class="text-white/50 text-sm leading-relaxed mb-8">
+                The most comprehensive digital archive of tennis history. Documenting every serve, volley, and legendary moment that shaped the game.
+            </p>
+            <div class="flex gap-4">
+                <div class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-[#F2FF00] hover:text-[#1A4F30] transition-all cursor-pointer">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-[#F2FF00] hover:text-[#1A4F30] transition-all cursor-pointer">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-24">
+            <div>
+                <h5 class="sport-font text-[#F2FF00] text-lg mb-6 tracking-widest">The Eras</h5>
+                <ul class="text-sm text-white/50 space-y-4 font-medium uppercase tracking-tighter">
+                    <li><a href="1970s.html" class="hover:text-[#F2FF00] transition-colors">1970s Wooden Classics</a></li>
+                    <li><a href="1980s.html" class="hover:text-[#F2FF00] transition-colors">1980s Graphite Revolution</a></li>
+                    <li><a href="1990s.html" class="hover:text-[#F2FF00] transition-colors">1990s Power Surge</a></li>
+                    <li><a href="2000s.html" class="hover:text-[#F2FF00] transition-colors">2000s Golden Era</a></li>
+                    <li><a href="2010s.html" class="hover:text-[#F2FF00] transition-colors">2010s Big Three Reign</a></li>
+                    <li><a href="2020s.html" class="hover:text-[#F2FF00] transition-colors">2020s Next Gen Rise</a></li>
+                </ul>
+            </div>
+
+             <div>
+                <h5 class="sport-font text-[#F2FF00] text-lg mb-6 tracking-widest">The Archive</h5>
+                <ul class="text-sm text-white/50 space-y-4 font-medium uppercase tracking-tighter">
+                    <li><a href="https://en.wikipedia.org/wiki/List_of_Grand_Slam_and_related_tennis_records" class="hover:text-[#F2FF00] transition-colors">Grand Slam Records</a></li>
+                    <li><a href="https://www.atptour.com/en/players?matchType=Singles&rank=Top%2010&region=all" class="hover:text-[#F2FF00] transition-colors">ATP Profiles</a></li>
+                    <li><a href="https://www.atptour.com/en/players?matchType=Singles&rank=Top%2010&region=all" class="hover:text-[#F2FF00] transition-colors">WTA Profiles</a></li>
+                    <li><a href="https://live-tennis.eu/en/wta-live-ranking" class="hover:text-[#F2FF00] transition-colors">Live ATP Rankings</a></li>
+                    <li><a href="https://live-tennis.eu/en/atp-live-ranking" class="hover:text-[#F2FF00] transition-colors">Live WTA Rankings</a></li>
+                </ul>
+            </div>
+
+            <div class="col-span-2 lg:col-span-1">
+                <h5 class="sport-font text-[#F2FF00] text-lg mb-6 tracking-widest font-black">Follow Pro Tours</h5>
+                <div class="space-y-5">
+                    <a href="https://www.instagram.com/wta" target="_blank" class="flex items-center gap-4 group">
+                        <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center group-hover:bg-[#F2FF00]/10 transition-colors">
+                            <i class="fa-brands fa-instagram text-white/40 group-hover:text-[#F2FF00]"></i>
+                        </div>
+                        <span class="text-xs text-white/60 group-hover:text-white uppercase font-black tracking-widest transition-colors">WTA Official</span>
+                    </a>
+                    <a href="https://www.instagram.com/atptour" target="_blank" class="flex items-center gap-4 group">
+                        <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center group-hover:bg-[#F2FF00]/10 transition-colors">
+                            <i class="fa-brands fa-instagram text-white/40 group-hover:text-[#F2FF00]"></i>
+                        </div>
+                        <span class="text-xs text-white/60 group-hover:text-white uppercase font-black tracking-widest transition-colors">ATP Tour Official</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-[10px] font-black text-white/20 uppercase tracking-[0.3em]">
+            © 2026 Tennis Legends Encyclopedia. Designed for history. Created by Veronika Lebedovska
+        </p>
+    </div>
+</footer>
+    <button id="to-top" class="fixed bottom-8 right-8 z-[100] bg-[#2D7A4D] text-tennis-yellow w-12 h-12 rounded-sm shadow-2xl flex items-center justify-center opacity-0 translate-y-10 pointer-events-none transition-all duration-500 hover:bg-court-green hover:scale-110 active:scale-95 group">
+    <i class="fa-solid fa-arrow-up text-xl group-hover:-translate-y-1 transition-transform"></i>
+    </button>
+    <script src="js/script.js"> </script>
+</body>
+</html>

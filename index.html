@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Legends: The Golden Eras | Interactive Encyclopedia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="court-bg">
+<header class="sticky top-0 z-50 bg-court-green text-white py-5 px-6 md:px-12 flex items-center justify-between shadow-xl">
+    <div class="flex items-center gap-3 shrink-0">
+        <svg class="w-8 h-8 text-tennis-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M4.32 17.68a7 7 0 0 1 9.36-9.36"></path>
+            <path d="M10.32 4.32a7 7 0 0 1 9.36 9.36"></path>
+        </svg>
+        <span class="sport-font text-2xl tracking-tighter"><a href="index.html">Tennis Legends</a></span>
+    </div>
+
+    <nav class="hidden lg:flex items-center gap-4 xl:gap-6 font-bold text-[10px] xl:text-xs tracking-widest uppercase">
+        <a href="index.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">Home</a>
+        <a href="#" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">Players</a>
+        <div class="flex items-center gap-3 border-x border-white/10 px-4">
+            <a href="1970s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">70s</a>
+            <a href="1980s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">80s</a>
+            <a href="1990s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">90s</a>
+            <a href="2000s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">00s</a>
+            <a href="2010s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">10s</a>
+            <a href="2020s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">20s</a>
+        </div>
+        <a href="ukrtennis.html" class="group flex items-center gap-2 px-4 py-2 border border-white/20 rounded-full hover:bg-white transition-all duration-300">
+            <span class="group-hover:text-black transition-colors duration-300">Ukrainian Tennis 🇺🇦</span>
+        </a>
+    </nav>
+
+    <div class="lg:hidden flex items-center">
+        <button id="open-menu" class="text-white focus:outline-none">
+            <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-court-green z-[100] translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col items-center justify-center gap-8">
+        <button id="close-menu" class="absolute top-6 right-6 text-white text-4xl">&times;</button>
+        <a href="#players" class="menu-link text-2xl font-bold uppercase tracking-widest hover:text-tennis-yellow">Players</a>
+        <div class="flex flex-col items-center gap-4 border-y border-white/10 py-6 w-full">
+            <a href="#70s" class="menu-link text-xl hover:text-tennis-yellow">1970s</a>
+            <a href="#80s" class="menu-link text-xl hover:text-tennis-yellow">1980s</a>
+            <a href="#90s" class="menu-link text-xl hover:text-tennis-yellow">1990s</a>
+            <a href="#00s" class="menu-link text-xl hover:text-tennis-yellow">2000s</a>
+            <a href="#10s" class="menu-link text-xl hover:text-tennis-yellow">2010s</a>
+            <a href="#20s" class="menu-link text-xl hover:text-tennis-yellow">2020s</a>
+        </div>
+        <a href="#ukraine" class="menu-link text-xl font-bold text-tennis-yellow border border-tennis-yellow px-6 py-3 rounded-full">Ukrainian Tennis 🇺🇦</a>
+    </div>
+</header>
+
+  <section class="relative min-h-[90vh] flex items-center px-6 md:px-12 py-20 overflow-hidden bg-[#f9fafb]">
+    <div class="absolute inset-0 z-0" 
+         style="background-image: linear-gradient(rgba(26, 79, 48, 0.05) 1px, transparent 1px), 
+                linear-gradient(90deg, rgba(26, 79, 48, 0.05) 1px, transparent 1px); 
+                background-size: 50px 50px;">
+    </div>
+
+    <div class="absolute top-20 right-0 translate-x-0 md:-translate-x-10 sport-font text-[11rem] md:text-[19rem] text-court-green select-none pointer-events-none z-0 italic font-black" 
+     style="opacity: 0.1; line-height: 0.8; white-space: nowrap;"> LEGACY </div>
+
+    <div class="max-w-5xl z-10 relative">
+        <div class="inline-block bg-tennis-yellow text-court-green px-4 py-1 font-black text-sm uppercase mb-6 italic shadow-sm">
+            Digital Encyclopedia
+        </div>
+        
+        <h1 class="sport-font text-7xl md:text-[10rem] leading-[0.85] text-gray-900 mb-8">
+            Evolution <br><span class="text-transparent" style="-webkit-text-stroke: 2px #1A4F30;">of Greatness</span>
+        </h1>
+        
+        <p class="text-xl md:text-2xl text-gray-600 max-w-2xl mb-10 leading-relaxed">
+            Journey through the decades of tennis history. From the wooden rackets of the 70s to the high-tech power of the modern era.
+        </p>
+        
+        <div class="flex flex-wrap gap-5">
+            <a href="2020s.html" class="bg-court-green text-white px-10 py-5 rounded-sm font-bold flex items-center gap-3 hover:bg-black transition shadow-lg active:scale-95">
+                EXPLORE ERAS <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#ukraine" class="bg-white border-2 border-court-green text-court-green px-10 py-5 rounded-sm font-bold hover:bg-gray-50 transition shadow-sm active:scale-95">
+                UKRAINIAN STARS
+            </a>
+        </div>
+    </div>
+</section>
+  <div class="bg-court-green py-8 border-y-4 border-tennis-yellow/20 overflow-hidden marquee-container">
+    <div class="animate-marquee">
+        <div class="flex items-center gap-12 md:gap-24 px-6">
+            <span class="sport-font text-5xl md:text-7xl font-black text-tennis-yellow tracking-tighter italic">1970S</span>
+            <span class="sport-font text-5xl md:text-7xl font-black text-outline-yellow tracking-tighter italic">1980S</span>
+            <span class="sport-font text-5xl md:text-7xl font-black text-tennis-yellow tracking-tighter italic">1990S</span>
+            <span class="sport-font text-5xl md:text-7xl font-black text-outline-yellow tracking-tighter italic">2000S</span>
+            <span class="sport-font text-5xl md:text-7xl font-black text-tennis-yellow tracking-tighter italic">2010S</span>
+            <span class="sport-font text-5xl md:text-7xl font-black text-outline-yellow tracking-tighter italic">2020S</span>
+        </div>
+        
+        <div class="flex items-center gap-12 md:gap-24 px-6">
+            <span class="sport-font text-5xl md:text-7xl font-black text-tennis-yellow tracking-tighter italic">1970S</span>
+            <span class="sport-font text-5xl md:text-7xl font-black text-outline-yellow tracking-tighter italic">1980S</span>
+            <span class="sport-font text-5xl md:text-7xl font-black text-tennis-yellow tracking-tighter italic">1990S</span>
+            <span class="sport-font text-5xl md:text-7xl font-black text-outline-yellow tracking-tighter italic">2000S</span>
+            <span class="sport-font text-5xl md:text-7xl font-black text-tennis-yellow tracking-tighter italic">2010S</span>
+            <span class="sport-font text-5xl md:text-7xl font-black text-outline-yellow tracking-tighter italic">2020S</span>
+        </div>
+    </div>
+</div>
+<section class="py-24 px-6 md:px-12 relative overflow-hidden bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-16">
+        <div class="lg:w-1/2 z-10">
+            <h2 class="sport-font text-6xl text-court-green leading-none mb-8">
+                The Living <br> <span class="text-transparent" style="-webkit-text-stroke: 1.5px #1A4F30;">Archive</span>
+            </h2>
+            <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
+                <p>
+                    Tennis Legends is a high-fidelity digital encyclopedia dedicated to preserving the echoes of the court. We don't just track scores; we document the <strong>cultural shifts</strong>, the technological breakthroughs, and the raw human emotion that defined each era.
+                </p>
+                <p>
+                    From the silent elegance of the grass-court pioneers to the high-velocity baseline wars of the modern day, our mission is to provide a comprehensive look at how the game was won, played, and lived.
+                </p>
+            </div>
+            <div class="mt-12 flex gap-12 border-t border-gray-100 pt-8">
+                <div>
+                    <p class="sport-font text-4xl text-court-green">50+</p>
+                    <p class="text-[10px] font-black uppercase text-gray-400 tracking-widest">Legends Analyzed</p>
+                </div>
+                <div>
+                    <p class="sport-font text-4xl text-court-green">6</p>
+                    <p class="text-[10px] font-black uppercase text-gray-400 tracking-widest">Golden Eras</p>
+                </div>
+                <div>
+                    <p class="sport-font text-4xl text-court-green">100%</p>
+                    <p class="text-[10px] font-black uppercase text-gray-400 tracking-widest">Historical Accuracy</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="lg:w-1/2 relative">
+            <div class="absolute -inset-4 border-2 border-tennis-yellow -rotate-3 z-0"></div>
+            <img src="https://images.unsplash.com/photo-1592709823125-a191f07a2a5e?q=80&w=1000&auto=format&fit=crop" 
+                 class="relative z-10 w-full h-[500px] object-cover shadow-2xl filter contrast-125">
+            <div class="absolute -bottom-6 -left-6 bg-court-green text-tennis-yellow p-8 z-20 sport-font text-3xl italic">
+                EST. 2026
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-24 px-6 md:px-12 bg-gray-50 relative overflow-hidden">
+    <div class="ghost-text top-0 right-0">TECH</div>
+    
+    <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-20">
+            <h2 class="sport-font text-5xl text-court-green mb-4 leading-none">The Tools of Power</h2>
+            <div class="w-24 h-1.5 bg-tennis-yellow mx-auto"></div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-10 rounded-2xl border-b-4 border-gray-200 hover:border-tennis-yellow transition-all group flex flex-col">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="text-gray-200 sport-font text-5xl group-hover:text-tennis-yellow transition">01</div>
+                    <img src="https://antiquerackets.com/wp-content/uploads/2023/02/tennis-racket-wilson-kramer-3-nft-antiquerackets.jpg" alt="Wooden Racket" class="w-32 h-32 object-contain -mr-4 -mt-4 transform group-hover:rotate-12 transition-transform duration-500">
+                </div>
+                <h4 class="sport-font text-2xl text-court-green mb-4">The Wood Era</h4>
+                <p class="text-sm text-gray-500 leading-relaxed mb-6">
+                    Heavy, small-headed, and made of laminated wood. This era was about precision, touch, and the iconic "ping" of natural gut strings.
+                </p>
+                <div class="mt-auto flex items-center gap-2 text-xs font-bold text-gray-400">
+                    <i class="fa-solid fa-weight-hanging"></i> MAX WEIGHT: 400g
+                </div>
+            </div>
+
+            <div class="bg-white p-10 rounded-2xl border-b-4 border-gray-200 hover:border-tennis-yellow transition-all group flex flex-col">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="text-gray-200 sport-font text-5xl group-hover:text-tennis-yellow transition">02</div>
+                    <img src="https://centralsports.co.uk/cdn/shop/files/Untitled_design_-_2026-04-23T010341.249_1200x.png?v=1776877452" alt="Graphite Racket" class="w-32 h-32 object-contain -mr-4 -mt-4 transform group-hover:rotate-12 transition-transform duration-500">
+                </div>
+                <h4 class="sport-font text-2xl text-court-green mb-4">Graphite Revolution</h4>
+                <p class="text-sm text-gray-500 leading-relaxed mb-6">
+                    Lighter frames allowed for explosive racket head speed. The oversized revolution changed the physics of spin forever.
+                </p>
+                <div class="mt-auto flex items-center gap-2 text-xs font-bold text-gray-400">
+                    <i class="fa-solid fa-atom"></i> MATERIAL: CARBON FIBER
+                </div>
+            </div>
+
+            <div class="bg-white p-10 rounded-2xl border-b-4 border-gray-200 hover:border-tennis-yellow transition-all group flex flex-col">
+                <div class="flex justify-between items-start mb-6">
+                    <div class="text-gray-200 sport-font text-5xl group-hover:text-tennis-yellow transition">03</div>
+                    <img src="https://nz.wilson.com/cdn/shop/files/WR178811V_0_ULTRA_100_V5_FRM_ElectricBlue_1024x1024.jpg?v=1752542350" alt="Modern Racket" class="w-32 h-32 object-contain -mr-4 -mt-4 transform group-hover:rotate-12 transition-transform duration-500">
+                </div>
+                <h4 class="sport-font text-2xl text-court-green mb-4">Nano-Tech Era</h4>
+                <p class="text-sm text-gray-500 leading-relaxed mb-6">
+                    Auxetic constructions and advanced systems. Modern rackets are designed to maximize RPM and provide extreme forgiveness.
+                </p>
+                <div class="mt-auto flex items-center gap-2 text-xs font-bold text-gray-400">
+                    <i class="fa-solid fa-bolt"></i> SPIN RATE: 4000+ RPM
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <section class="py-16 bg-[#1A4F30] text-center px-6 relative overflow-hidden w-full">
+    <div class="absolute inset-0 opacity-5 pointer-events-none" 
+         style="background-image: radial-gradient(#F2FF00 0.5px, transparent 0.5px); background-size: 20px 20px;">
+    </div>
+
+    <div class="max-w-4xl mx-auto relative z-10">
+        <i class="fa-solid fa-quote-left text-[#F2FF00] text-4xl mb-6 opacity-40"></i>
+        
+        <h2 class="sport-font text-3xl md:text-5xl text-white italic leading-tight tracking-tight uppercase">
+            "You only live once, <br class="hidden md:block"> but you get to <span class="text-[#F2FF00]">serve twice.</span>"
+        </h2>
+        
+        <div class="mt-8 flex items-center justify-center gap-4">
+            <div class="w-8 h-0.5 bg-[#F2FF00]/50"></div>
+            <p class="sport-font text-[#F2FF00] text-lg md:text-xl tracking-widest font-medium opacity-90">
+                Court Wisdom
+            </p>
+            <div class="w-8 h-0.5 bg-[#F2FF00]/50"></div>
+        </div>
+    </div>
+</section>
+<section class="py-24 bg-white px-6 md:px-12 border-b border-gray-100 relative">
+        <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 md:mb-16 gap-4 md:gap-6">
+                <h2 class="sport-font text-5xl md:text-6xl text-court-green leading-none">
+                    The Major <br> <span class="text-transparent" style="-webkit-text-stroke: 1.5px #1A4F30;">Battlegrounds</span></h2>
+                <p class="text-gray-400 font-bold uppercase tracking-widest text-xs md:text-sm border-l-2 border-tennis-yellow pl-4 md:border-none md:pl-0"> Where Legends Are Born</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="group relative h-64 overflow-hidden rounded-xl bg-blue-600">
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+                <div class="absolute bottom-6 left-6 z-10">
+                    <p class="sport-font text-white text-2xl">Melbourne</p>
+                    <p class="text-tennis-yellow font-black text-xs uppercase tracking-widest">Hard Court</p>
+                </div>
+                <div class="absolute -right-4 -top-4 sport-font text-9xl text-white/10 italic">AUS</div>
+            </div>
+            <div class="group relative h-64 overflow-hidden rounded-xl bg-[#E3652E]"> <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+                <div class="absolute bottom-6 left-6 z-10">
+                    <p class="sport-font text-white text-2xl">Paris</p>
+                    <p class="text-tennis-yellow font-black text-xs uppercase tracking-widest">Red Clay</p>
+                </div>
+                <div class="absolute -right-4 -top-4 sport-font text-9xl text-white/10 italic">RG</div>
+            </div>
+            <div class="group relative h-64 overflow-hidden rounded-xl bg-court-green">
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+                <div class="absolute bottom-6 left-6 z-10">
+                    <p class="sport-font text-white text-2xl">London</p>
+                    <p class="text-tennis-yellow font-black text-xs uppercase tracking-widest">Grass</p>
+                </div>
+                <div class="absolute -right-4 -top-4 sport-font text-9xl text-white/10 italic">WIM</div>
+            </div>
+            <div class="group relative h-64 overflow-hidden rounded-xl bg-[#003366]">
+                <div class="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-all"></div>
+                <div class="absolute bottom-6 left-6 z-10">
+                    <p class="sport-font text-white text-2xl">New York</p>
+                    <p class="text-tennis-yellow font-black text-xs uppercase tracking-widest">DecoTurf</p>
+                </div>
+                <div class="absolute -right-4 -top-4 sport-font text-9xl text-white/10 italic">USA</div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="py-20 bg-white px-6 md:px-12 relative overflow-hidden">
+    <div class="ghost-text -bottom-10 -right-10 opacity-[0.03]">RULES</div>
+
+    <div class="max-w-7xl mx-auto">
+        <div class="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
+            <div class="max-w-xl">
+                <h2 class="sport-font text-5xl text-court-green leading-none mb-4">The Code of <br><span class="text-transparent" style="-webkit-text-stroke: 1px #1A4F30;">The Court</span></h2>
+                <p class="text-gray-500 text-sm uppercase font-bold tracking-widest">Master the traditions and terminology</p>
+            </div>
+            <div class="h-px flex-grow bg-gray-100 mb-4 hidden md:block mx-8"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="p-8 border border-gray-100 rounded-2xl hover:bg-court-green group transition-all duration-500">
+                <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-tennis-yellow transition-colors">
+                    <i class="fa-solid fa-heart text-court-green"></i>
+                </div>
+                <h4 class="sport-font text-xl text-court-green group-hover:text-tennis-yellow mb-3 transition-colors uppercase">"Love" Means Zero</h4>
+                <p class="text-sm text-gray-900">
+                    In tennis, "Love" represents a score of zero. Derived from the French word "l'oeuf" (the egg), symbolizing the shape of a zero.
+                </p>
+            </div>
+
+            <div class="p-8 border border-gray-100 rounded-2xl hover:bg-court-green group transition-all duration-500">
+                <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-tennis-yellow transition-colors">
+                    <i class="fa-solid fa-scale-balanced text-court-green"></i>
+                </div>
+                <h4 class="sport-font text-xl text-court-green group-hover:text-tennis-yellow mb-3 transition-colors uppercase">Deuce Control</h4>
+                <p class="text-sm text-gray-900">
+                    A 40-40 score is a "Deuce." A player must then win two consecutive points (Advantage and then Game) to secure the game.
+                </p>
+            </div>
+
+            <div class="p-8 border border-gray-100 rounded-2xl hover:bg-court-green group transition-all duration-500">
+                <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-tennis-yellow transition-colors">
+                    <i class="fa-solid fa-volume-xmark text-court-green"></i>
+                </div>
+                <h4 class="sport-font text-xl text-court-green group-hover:text-tennis-yellow mb-3 transition-colors uppercase">Quiet, Please</h4>
+                <p class="text-sm text-gray-900">
+                    Tennis is a game of extreme focus. Silence during rallies is not just a rule, it's a centuries-old mark of respect for the players.
+                </p>
+            </div>
+
+            <div class="p-8 border border-gray-100 rounded-2xl hover:bg-court-green group transition-all duration-500">
+                <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mb-6 group-hover:bg-tennis-yellow transition-colors">
+                    <i class="fa-solid fa-handshake text-court-green"></i>
+                </div>
+                <h4 class="sport-font text-xl text-court-green group-hover:text-tennis-yellow mb-3 transition-colors uppercase">The Handshake</h4>
+                <p class="text-sm text-gray-900">
+                    Win or lose, every professional match ends at the net with a handshake. It's the ultimate symbol of sportsmanship in the Golden Era.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+   <section class="py-12 bg-[#154127] border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6 md:px-12">
+        <p class="sport-font text-center text-white opacity-80 text-xs tracking-[0.3em] mb-10 uppercase font-black"> Official World Resources </p>
+        
+      <div class="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-24 opacity-90 hover:opacity-100 transition-opacity duration-500">
+            
+            <a href="https://www.atptour.com" target="_blank" class="group flex items-center gap-4">
+                <div class="w-12 h-12 bg-[#004797] text-white flex items-center justify-center font-black rounded-lg group-hover:bg-[#003572] transition-all shadow-md">ATP</div>
+                <div>
+                    <p class="sport-font text-xl text-white leading-none">ATP TOUR</p>
+                    <p class="text-[10px] font-bold text-white/40 tracking-widest uppercase">Official Men's Site</p>
+                </div>
+            </a>
+
+            <div class="hidden md:block w-px h-12 bg-white/10"></div>
+
+            <a href="https://www.wtatennis.com" target="_blank" class="group flex items-center gap-4">
+                <div class="w-12 h-12 bg-[#AC145A] text-white flex items-center justify-center font-black rounded-lg group-hover:bg-[#850f45] transition-all shadow-md">WTA</div>
+                <div>
+                    <p class="sport-font text-xl text-white leading-none">WTA TENNIS</p>
+                    <p class="text-[10px] font-bold text-white/40 tracking-widest uppercase">Official Women's Site</p>
+                </div>
+            </a>
+
+            <div class="hidden md:block w-px h-12 bg-white/10"></div>
+
+            <a href="https://www.itftennis.com" target="_blank" class="group flex items-center gap-4">
+                <div class="w-12 h-12 bg-[#CCFF00] text-[#1A4F30] flex items-center justify-center font-black rounded-lg group-hover:bg-[#b3e600] transition-all shadow-md">ITF</div>
+                <div>
+                    <p class="sport-font text-xl text-white leading-none">ITF TENNIS</p>
+                    <p class="text-[10px] font-bold text-white/40 tracking-widest uppercase">Global Federation</p>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<footer class="bg-[#1A4F30] py-20 px-6 md:px-12 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-px bg-white/10"></div>
+    
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-16 relative z-10">
+        
+        <div class="max-w-xs">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-12 h-12 bg-[#F2FF00] text-[#1A4F30] rounded-full flex items-center justify-center font-black text-xl">TL</div>
+                <span class="sport-font text-3xl tracking-tighter text-white">Tennis Legends</span>
+            </div>
+            <p class="text-white/50 text-sm leading-relaxed mb-8">
+                The most comprehensive digital archive of tennis history. Documenting every serve, volley, and legendary moment that shaped the game.
+            </p>
+            <div class="flex gap-4">
+                <div class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-[#F2FF00] hover:text-[#1A4F30] transition-all cursor-pointer">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-[#F2FF00] hover:text-[#1A4F30] transition-all cursor-pointer">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-24">
+            <div>
+                <h5 class="sport-font text-[#F2FF00] text-lg mb-6 tracking-widest">The Eras</h5>
+                <ul class="text-sm text-white/50 space-y-4 font-medium uppercase tracking-tighter">
+                    <li><a href="1970s.html" class="hover:text-[#F2FF00] transition-colors">1970s Wooden Classics</a></li>
+                    <li><a href="1980s.html" class="hover:text-[#F2FF00] transition-colors">1980s Graphite Revolution</a></li>
+                    <li><a href="1990s.html" class="hover:text-[#F2FF00] transition-colors">1990s Power Surge</a></li>
+                    <li><a href="2000s.html" class="hover:text-[#F2FF00] transition-colors">2000s Golden Era</a></li>
+                    <li><a href="2010s.html" class="hover:text-[#F2FF00] transition-colors">2010s Big Three Reign</a></li>
+                    <li><a href="2020s.html" class="hover:text-[#F2FF00] transition-colors">2020s Next Gen Rise</a></li>
+                </ul>
+            </div>
+
+             <div>
+                <h5 class="sport-font text-[#F2FF00] text-lg mb-6 tracking-widest">The Archive</h5>
+                <ul class="text-sm text-white/50 space-y-4 font-medium uppercase tracking-tighter">
+                    <li><a href="https://en.wikipedia.org/wiki/List_of_Grand_Slam_and_related_tennis_records" class="hover:text-[#F2FF00] transition-colors">Grand Slam Records</a></li>
+                    <li><a href="https://www.atptour.com/en/players?matchType=Singles&rank=Top%2010&region=all" class="hover:text-[#F2FF00] transition-colors">ATP Profiles</a></li>
+                    <li><a href="https://www.atptour.com/en/players?matchType=Singles&rank=Top%2010&region=all" class="hover:text-[#F2FF00] transition-colors">WTA Profiles</a></li>
+                    <li><a href="https://live-tennis.eu/en/wta-live-ranking" class="hover:text-[#F2FF00] transition-colors">Live ATP Rankings</a></li>
+                    <li><a href="https://live-tennis.eu/en/atp-live-ranking" class="hover:text-[#F2FF00] transition-colors">Live WTA Rankings</a></li>
+                </ul>
+            </div>
+
+            <div class="col-span-2 lg:col-span-1">
+                <h5 class="sport-font text-[#F2FF00] text-lg mb-6 tracking-widest font-black">Follow Pro Tours</h5>
+                <div class="space-y-5">
+                    <a href="https://www.instagram.com/wta" target="_blank" class="flex items-center gap-4 group">
+                        <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center group-hover:bg-[#F2FF00]/10 transition-colors">
+                            <i class="fa-brands fa-instagram text-white/40 group-hover:text-[#F2FF00]"></i>
+                        </div>
+                        <span class="text-xs text-white/60 group-hover:text-white uppercase font-black tracking-widest transition-colors">WTA Official</span>
+                    </a>
+                    <a href="https://www.instagram.com/atptour" target="_blank" class="flex items-center gap-4 group">
+                        <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center group-hover:bg-[#F2FF00]/10 transition-colors">
+                            <i class="fa-brands fa-instagram text-white/40 group-hover:text-[#F2FF00]"></i>
+                        </div>
+                        <span class="text-xs text-white/60 group-hover:text-white uppercase font-black tracking-widest transition-colors">ATP Tour Official</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-[10px] font-black text-white/20 uppercase tracking-[0.3em]">
+            © 2026 Tennis Legends Encyclopedia. Designed for history. Created by Veronika Lebedovska
+        </p>
+    </div>
+</footer>
+    <button id="to-top" class="fixed bottom-8 right-8 z-[100] bg-[#2D7A4D] text-tennis-yellow w-12 h-12 rounded-sm shadow-2xl flex items-center justify-center opacity-0 translate-y-10 pointer-events-none transition-all duration-500 hover:bg-court-green hover:scale-110 active:scale-95 group">
+    <i class="fa-solid fa-arrow-up text-xl group-hover:-translate-y-1 transition-transform"></i>
+    </button>
+    <script src="js/script.js"> </script>
+</body>
+</html>

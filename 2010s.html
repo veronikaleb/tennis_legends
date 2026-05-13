@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tennis Legends: The Golden Eras | Interactive Encyclopedia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="court-bg">
+<header class="sticky top-0 z-50 bg-court-green text-white py-5 px-6 md:px-12 flex items-center justify-between shadow-xl">
+    <div class="flex items-center gap-3 shrink-0">
+        <svg class="w-8 h-8 text-tennis-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M4.32 17.68a7 7 0 0 1 9.36-9.36"></path>
+            <path d="M10.32 4.32a7 7 0 0 1 9.36 9.36"></path>
+        </svg>
+        <span class="sport-font text-2xl tracking-tighter"><a href="index.html">Tennis Legends</a></span>
+    </div>
+
+    <nav class="hidden lg:flex items-center gap-4 xl:gap-6 font-bold text-[10px] xl:text-xs tracking-widest uppercase">
+        <a href="index.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">Home</a>
+        <a href="#" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">Players</a>
+        <div class="flex items-center gap-3 border-x border-white/10 px-4">
+            <a href="1970s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">70s</a>
+            <a href="1980s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">80s</a>
+            <a href="1990s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">90s</a>
+            <a href="2000s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">00s</a>
+            <a href="2010s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">10s</a>
+            <a href="2020s.html" class="hover:text-tennis-yellow hover:scale-110 transition-all duration-300">20s</a>
+        </div>
+        <a href="ukrtennis.html" class="group flex items-center gap-2 px-4 py-2 border border-white/20 rounded-full hover:bg-white transition-all duration-300">
+            <span class="group-hover:text-black transition-colors duration-300">Ukrainian Tennis 🇺🇦</span>
+        </a>
+    </nav>
+
+    <div class="lg:hidden flex items-center">
+        <button id="open-menu" class="text-white focus:outline-none">
+            <i class="fa-solid fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <div id="mobile-menu" class="fixed inset-0 bg-court-green z-[100] translate-x-full transition-transform duration-300 ease-in-out lg:hidden flex flex-col items-center justify-center gap-8">
+        <button id="close-menu" class="absolute top-6 right-6 text-white text-4xl">&times;</button>
+        <a href="#players" class="menu-link text-2xl font-bold uppercase tracking-widest hover:text-tennis-yellow">Players</a>
+        <div class="flex flex-col items-center gap-4 border-y border-white/10 py-6 w-full">
+            <a href="#70s" class="menu-link text-xl hover:text-tennis-yellow">1970s</a>
+            <a href="#80s" class="menu-link text-xl hover:text-tennis-yellow">1980s</a>
+            <a href="#90s" class="menu-link text-xl hover:text-tennis-yellow">1990s</a>
+            <a href="#00s" class="menu-link text-xl hover:text-tennis-yellow">2000s</a>
+            <a href="#10s" class="menu-link text-xl hover:text-tennis-yellow">2010s</a>
+            <a href="#20s" class="menu-link text-xl hover:text-tennis-yellow">2020s</a>
+        </div>
+        <a href="#ukraine" class="menu-link text-xl font-bold text-tennis-yellow border border-tennis-yellow px-6 py-3 rounded-full">Ukrainian Tennis 🇺🇦</a>
+    </div>
+</header>
+<!-- Hero Section (2010s - 80s Clay Style) -->
+<section class="relative min-h-[90vh] flex items-center px-6 md:px-12 py-20 overflow-hidden bg-[#d97706]">
+    <div class="absolute inset-0 opacity-20 pointer-events-none z-0 surface-texture" style="background-image: url('https://www.transparenttextures.com/patterns/pinstriped-suit.png');"></div>
+    <div class="absolute inset-0 z-0 court-lines-clay"></div>
+    <div class="absolute top-20 right-0 sport-font text-[11rem] md:text-[19rem] text-white opacity-10 select-none pointer-events-none z-0 italic font-black leading-[0.8] whitespace-nowrap">DOMINANCE</div>
+    <div class="max-w-5xl z-10 relative">
+        <div class="inline-block bg-tennis-yellow text-[#d97706] px-4 py-1 font-black text-sm uppercase mb-6 italic shadow-sm">Digital Encyclopedia</div>
+        <h1 class="sport-font text-7xl md:text-[10rem] leading-[0.85] text-white mb-8">The Athletic <br><span class="text-transparent outline-white">Decade</span></h1>
+        <p class="text-xl md:text-2xl text-orange-50 max-w-2xl mb-10 leading-relaxed drop-shadow-md">An era of unprecedented physical endurance, the peak of the Big Four, and the tactical mastery of the baseline game.</p>
+    </div>
+</section>
+
+<!-- Equipment Section 2010s -->
+<section class="py-24 px-6 md:px-12 bg-white border-b border-gray-100">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+        <div class="md:w-1/2">
+            <h2 class="sport-font text-5xl text-court-green mb-6 italic">Graphene & Dampening</h2>
+            <p class="text-gray-600 text-lg mb-8 leading-relaxed">Manufacturers focused on Graphene and high-tech fibers to create stiffer frames that could handle extreme swing speeds while protecting the player's arm from vibrations.</p>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <p class="font-black text-court-green uppercase text-xs mb-1">Tech</p>
+                    <p class="text-xl font-bold">Graphene & Sensors</p>
+                </div>
+                <div class="p-4 bg-gray-50 rounded-lg">
+                    <p class="font-black text-court-green uppercase text-xs mb-1">Stringing</p>
+                    <p class="text-xl font-bold">Control Focused</p>
+                </div>
+            </div>
+        </div>
+        <div class="md:w-1/2 flex justify-center">
+            <div class="relative w-72 h-72 md:w-80 md:h-80">
+                <div class="absolute inset-0 bg-orange-600/5 rounded-full scale-110"></div>
+                <div class="relative w-full h-full rounded-full border-8 border-white shadow-2xl overflow-hidden z-10">
+                    <img src="https://images.tennis.com/image/private/t_16-9_768/tenniscom-prd/e6cvjrp6zrjgpnrheujj.jpg" class="w-full h-full object-cover">
+                </div>
+                <div class="absolute -bottom-4 -right-4 bg-[#d97706] text-white px-6 py-2 font-black italic sport-font text-xl z-20 shadow-lg -rotate-12">Pro Tech</div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Compact 2010s: Clay Court Era -->
+<section class="relative flex items-center px-6 md:px-12 py-16 overflow-hidden bg-[#c25e44] border-b border-white/10">
+    <!-- Grid -->
+    <div class="absolute inset-0 z-0" 
+         style="background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px), 
+                linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px); 
+                background-size: 40px 40px;">
+    </div>
+    
+    <!-- Background Text -->
+    <div class="absolute top-10 right-0 sport-font text-[9rem] md:text-[14rem] text-white select-none pointer-events-none z-0 italic font-black opacity-10 whitespace-nowrap leading-none">
+        2010S
+    </div>
+    
+    <div class="max-w-6xl mx-auto w-full z-10 relative">
+        <div class="inline-block bg-[#FFD700] text-[#c25e44] px-3 py-0.5 font-black text-xs uppercase mb-4 italic">
+            The King of Clay Era
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+            <div>
+                <h2 class="sport-font text-5xl md:text-7xl leading-[0.85] text-white mb-6 uppercase italic">
+                    Grit & <br><span class="text-transparent" style="-webkit-text-stroke: 1.5px #FFD700;">Greatness</span>
+                </h2>
+                <p class="text-lg text-orange-50 font-light leading-snug mb-4">
+                    A decade of peak physical warfare, where the red clay of Paris became the ultimate test of endurance for the Big Three.
+                </p>
+                <div class="flex flex-wrap gap-4 text-xs font-bold uppercase tracking-wider text-orange-100">
+                    <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#FFD700] rotate-45"></span> Nadal Dominance</span>
+                    <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#FFD700] rotate-45"></span> Heavy Topspin</span>
+                    <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-[#FFD700] rotate-45"></span> Serena Slam</span>
+                </div>
+            </div>
+
+            <div class="bg-black/10 p-6 rounded-xl border border-white/10 backdrop-blur-sm">
+                <p class="italic text-white text-base leading-relaxed">
+                    "Champions were forged in the dust of the most grueling points ever played."
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Hall of Fame 2010s -->
+<section class="py-24 px-6 md:px-12 bg-gray-50">
+    <div class="max-w-7xl mx-auto">
+        <h2 class="sport-font text-6xl text-court-green mb-16 italic text-center uppercase">2010s Hall of Fame</h2>
+
+        <!-- Men's Singles -->
+        <div class="mb-20">
+            <h3 class="sport-font text-3xl text-[#d97706] mb-10 flex items-center gap-4">
+                <span class="w-12 h-1 bg-tennis-yellow"></span> Men's Singles
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Novak Djokovic -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://cdn.britannica.com/79/249579-050-B262887F/Novak-Djokovic-Serbia-US-Open-2023.jpg" alt="Novak Djokovic"></div>
+                    <div class="p-6">
+                        <h4 class="sport-font text-2xl text-court-green">Novak Djokovic</h4>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>May 22, 1987</span></div>
+                            <div><p>Country</p><span>Serbia</span></div>
+                            <div><p>Total Titles</p><span>100</span></div> <!-- 99 Singles + 1 Double -->
+                            <div><p>Grand Slams</p><span>24</span></div>
+                        </div>
+                        <p class="description">The king of precision and defense. He redefined tennis with his incredible flexibility and mental strength.</p>
+                    </div>
+                </div>
+                <!-- Andy Murray -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://www.aljazeera.com/wp-content/uploads/2024/01/AP24015281146080-1705316570.jpg?resize=1920%2C1440" alt="Andy Murray"></div>
+                    <div class="p-6">
+                        <h4 class="sport-font text-2xl text-court-green">Andy Murray</h4>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>May 15, 1987</span></div>
+                            <div><p>Country</p><span>UK</span></div>
+                            <div><p>Total Titles</p><span>48</span></div> <!-- 46 Singles + 2 Doubles -->
+                            <div><p>Grand Slams</p><span>3</span></div>
+                        </div>
+                        <p class="description">A tactical genius and the man who broke the long drought for British tennis. A master of the return.</p>
+                    </div>
+                </div>
+                <!-- Stan Wawrinka -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Stan_Wawrinka%2C_Basel_2024.jpg" alt="Stan Wawrinka"></div>
+                    <div class="p-6">
+                        <h4 class="sport-font text-2xl text-court-green">Stan Wawrinka</h4>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Mar 28, 1985</span></div>
+                            <div><p>Country</p><span>Switzerland</span></div>
+                            <div><p>Total Titles</p><span>19</span></div> <!-- 16 Singles + 3 Doubles -->
+                            <div><p>Grand Slams</p><span>3</span></div>
+                        </div>
+                        <p class="description">"Stan the Man" — famous for his destructive one-handed backhand and ability to overpower anyone.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Women's Singles -->
+        <div class="mb-20">
+            <h3 class="sport-font text-3xl text-[#d97706] mb-10 flex items-center gap-4">
+                <span class="w-12 h-1 bg-tennis-yellow"></span> Women's Singles
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Naomi Osaka -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://e0.365dm.com/21/08/768x432/skysports-naomi-osaka-osaka_5495210.jpg?20210830073342" alt="Naomi Osaka"></div>
+                    <div class="p-6">
+                        <h4 class="sport-font text-2xl text-court-green">Naomi Osaka</h4>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Oct 16, 1997</span></div>
+                            <div><p>Country</p><span>Japan</span></div>
+                            <div><p>Total Titles</p><span>7</span></div>
+                            <div><p>Grand Slams</p><span>4</span></div>
+                        </div>
+                        <p class="description">A powerhouse on hard courts with a devastating serve and calm demeanor under pressure.</p>
+                    </div>
+                </div>
+                <!-- Petra Kvitova -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://ichef.bbci.co.uk/ace/standard/1552/cpsprodpb/53e3/live/b566bcd0-81dd-11f0-83cc-c5da98c419b8.jpg" alt="Petra Kvitova"></div>
+                    <div class="p-6">
+                        <h4 class="sport-font text-2xl text-court-green">Petra Kvitová</h4>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Mar 8, 1990</span></div>
+                            <div><p>Country</p><span>Czechia</span></div>
+                            <div><p>Total Titles</p><span>31</span></div>
+                            <div><p>Grand Slams</p><span>2</span></div>
+                        </div>
+                        <p class="description">A legendary lefty with massive groundstrokes and two Wimbledon titles to her name.</p>
+                    </div>
+                </div>
+                <!-- Ashleigh Barty -->
+                <div class="player-card-70s">
+                    <div class="img-container"><img src="https://e0.365dm.com/21/04/768x432/skysports-ashleigh-barty-tennis_5327140.jpg?20210402080221" alt="Ashleigh Barty"></div>
+                    <div class="p-6">
+                        <h4 class="sport-font text-2xl text-court-green">Ashleigh Barty</h4>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Apr 24, 1996</span></div>
+                            <div><p>Country</p><span>Australia</span></div>
+                            <div><p>Total Titles</p><span>27</span></div> <!-- 15 Singles + 12 Doubles -->
+                            <div><p>Grand Slams</p><span>3</span></div>
+                        </div>
+                        <p class="description">Brought back the slice and tactical variety, retiring at the very top as World No. 1.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Doubles Stars -->
+        <div>
+            <h3 class="sport-font text-3xl text-[#d97706] mb-10 flex items-center gap-4">
+                <span class="w-12 h-1 bg-tennis-yellow"></span> Doubles Legends
+            </h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Bruno Soares -->
+                <div class="player-card-70s flex-row-layout">
+                    <div class="md:w-1/3 img-container">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/1/15/Soares_WM19_%2834%29_%2848521705926%29.jpg" alt="Bruno Soares">
+                    </div>
+                    <div class="md:w-2/3 p-6">
+                        <h4 class="sport-font text-2xl text-court-green">Bruno Soares</h4>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Feb 27, 1982</span></div>
+                            <div><p>Country</p><span>Brazil</span></div>
+                            <div><p>Total Titles</p><span>35</span></div>
+                            <div><p>Slam Titles</p><span>6</span></div>
+                        </div>
+                        <p class="description">A multiple Grand Slam champion in doubles and mixed doubles with expert net skills.</p>
+                    </div>
+                </div>
+                <!-- Jamie Murray -->
+                <div class="player-card-70s flex-row-layout">
+                    <div class="md:w-1/3 img-container">
+                        <img src="https://www.lta.org.uk/48ca40/siteassets/compete/pro-players/jamie-murray-smiles.jpg?w=3200&h=1920&mode=crop" alt="Jamie Murray">
+                    </div>
+                    <div class="md:w-2/3 p-6">
+                        <h4 class="sport-font text-2xl text-court-green">Jamie Murray</h4>
+                        <div class="stats-grid">
+                            <div><p>Born</p><span>Feb 13, 1986</span></div>
+                            <div><p>Country</p><span>UK</span></div>
+                            <div><p>Total Titles</p><span>34</span></div>
+                            <div><p>Slam Titles</p><span>7</span></div>
+                        </div>
+                        <p class="description">A former World No. 1 in doubles, known for his incredible instincts and left-handed serve.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="bg-[#1A4F30] py-20 px-6 md:px-12 relative overflow-hidden">
+    <div class="absolute top-0 left-0 w-full h-px bg-white/10"></div>
+    
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start gap-16 relative z-10">
+        
+        <div class="max-w-xs">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-12 h-12 bg-[#F2FF00] text-[#1A4F30] rounded-full flex items-center justify-center font-black text-xl">TL</div>
+                <span class="sport-font text-3xl tracking-tighter text-white">Tennis Legends</span>
+            </div>
+            <p class="text-white/50 text-sm leading-relaxed mb-8">
+                The most comprehensive digital archive of tennis history. Documenting every serve, volley, and legendary moment that shaped the game.
+            </p>
+            <div class="flex gap-4">
+                <div class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-[#F2FF00] hover:text-[#1A4F30] transition-all cursor-pointer">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </div>
+                <div class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center text-white hover:bg-[#F2FF00] hover:text-[#1A4F30] transition-all cursor-pointer">
+                    <i class="fa-brands fa-youtube"></i>
+                </div>
+            </div>
+        </div>
+        
+        <div class="grid grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-24">
+            <div>
+                <h5 class="sport-font text-[#F2FF00] text-lg mb-6 tracking-widest">The Eras</h5>
+                <ul class="text-sm text-white/50 space-y-4 font-medium uppercase tracking-tighter">
+                    <li><a href="1970s.html" class="hover:text-[#F2FF00] transition-colors">1970s Wooden Classics</a></li>
+                    <li><a href="1980s.html" class="hover:text-[#F2FF00] transition-colors">1980s Graphite Revolution</a></li>
+                    <li><a href="1990s.html" class="hover:text-[#F2FF00] transition-colors">1990s Power Surge</a></li>
+                    <li><a href="2000s.html" class="hover:text-[#F2FF00] transition-colors">2000s Golden Era</a></li>
+                    <li><a href="2010s.html" class="hover:text-[#F2FF00] transition-colors">2010s Big Three Reign</a></li>
+                    <li><a href="2020s.html" class="hover:text-[#F2FF00] transition-colors">2020s Next Gen Rise</a></li>
+                </ul>
+            </div>
+
+             <div>
+                <h5 class="sport-font text-[#F2FF00] text-lg mb-6 tracking-widest">The Archive</h5>
+                <ul class="text-sm text-white/50 space-y-4 font-medium uppercase tracking-tighter">
+                    <li><a href="https://en.wikipedia.org/wiki/List_of_Grand_Slam_and_related_tennis_records" class="hover:text-[#F2FF00] transition-colors">Grand Slam Records</a></li>
+                    <li><a href="https://www.atptour.com/en/players?matchType=Singles&rank=Top%2010&region=all" class="hover:text-[#F2FF00] transition-colors">ATP Profiles</a></li>
+                    <li><a href="https://www.atptour.com/en/players?matchType=Singles&rank=Top%2010&region=all" class="hover:text-[#F2FF00] transition-colors">WTA Profiles</a></li>
+                    <li><a href="https://live-tennis.eu/en/wta-live-ranking" class="hover:text-[#F2FF00] transition-colors">Live ATP Rankings</a></li>
+                    <li><a href="https://live-tennis.eu/en/atp-live-ranking" class="hover:text-[#F2FF00] transition-colors">Live WTA Rankings</a></li>
+                </ul>
+            </div>
+
+            <div class="col-span-2 lg:col-span-1">
+                <h5 class="sport-font text-[#F2FF00] text-lg mb-6 tracking-widest font-black">Follow Pro Tours</h5>
+                <div class="space-y-5">
+                    <a href="https://www.instagram.com/wta" target="_blank" class="flex items-center gap-4 group">
+                        <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center group-hover:bg-[#F2FF00]/10 transition-colors">
+                            <i class="fa-brands fa-instagram text-white/40 group-hover:text-[#F2FF00]"></i>
+                        </div>
+                        <span class="text-xs text-white/60 group-hover:text-white uppercase font-black tracking-widest transition-colors">WTA Official</span>
+                    </a>
+                    <a href="https://www.instagram.com/atptour" target="_blank" class="flex items-center gap-4 group">
+                        <div class="w-10 h-10 bg-white/5 rounded-lg flex items-center justify-center group-hover:bg-[#F2FF00]/10 transition-colors">
+                            <i class="fa-brands fa-instagram text-white/40 group-hover:text-[#F2FF00]"></i>
+                        </div>
+                        <span class="text-xs text-white/60 group-hover:text-white uppercase font-black tracking-widest transition-colors">ATP Tour Official</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-7xl mx-auto mt-20 pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-[10px] font-black text-white/20 uppercase tracking-[0.3em]">
+            © 2026 Tennis Legends Encyclopedia. Designed for history. Created by Veronika Lebedovska
+        </p>
+    </div>
+</footer>
+    <button id="to-top" class="fixed bottom-8 right-8 z-[100] bg-[#2D7A4D] text-tennis-yellow w-12 h-12 rounded-sm shadow-2xl flex items-center justify-center opacity-0 translate-y-10 pointer-events-none transition-all duration-500 hover:bg-court-green hover:scale-110 active:scale-95 group">
+    <i class="fa-solid fa-arrow-up text-xl group-hover:-translate-y-1 transition-transform"></i>
+    </button>
+    <script src="js/script.js"> </script>
+</body>
+</html>
