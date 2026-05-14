@@ -11,13 +11,9 @@
 
 ## 🛠 Technical Stack
 
-*   **Frontend:** HTML.
+*   **Frontend:** HTML, CSS, JS.
 *   **Styling:** Tailwind CSS (featuring sports-grade typography and mobile-first responsive design).
 *   **Hosting:** GitHub Pages.
-
-## 👩‍💻 About the Author
-
-The project was developed by **Veronika Lebedovska**, a 4th-year IT student at VTEI and a Junior Manual QA Engineer. This platform merges documentation testing skills, UI/UX development, and a deep passion for the sports industry.
 
 ---
 *Created for the tennis community with attention to every detail.*
